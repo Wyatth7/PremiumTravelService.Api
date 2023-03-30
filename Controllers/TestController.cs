@@ -1,27 +1,27 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PremiumTravelService.Api.DataStorage.DataHandling;
 using PremiumTravelService.Api.Persistence.Entities;
+using PremiumTravelService.Api.Services.DataStorage;
 
 namespace PremiumTravelService.Api.Controllers;
 
 public class TestController : BaseApiController
 {
+
+    private readonly IDataStorageService _dataStorageService;
+
+    public TestController(IDataStorageService dataStorageService)
+    {
+        _dataStorageService = dataStorageService;
+    }
+    
     [HttpPost]
     [Consumes("application/json")]
     public async Task<IActionResult> TestJsonWrite([FromBody] Trip trip)
     {
-        var jsonReaderWriter = new JsonReadWrite();
-        
-        await jsonReaderWriter.Write(trip);
-        
-        var readData = await jsonReaderWriter.Read();
+        await _dataStorageService.Write(trip);
 
-        // var xmlReaderWriter = new XmlReadWrite();
-        //
-        // await xmlReaderWriter.Write(trip);
-        //
-        // var readData = await xmlReaderWriter.Read();
-        //
+        var readData = await _dataStorageService.Read();
+        
         return new OkObjectResult(readData);
     }
 }
