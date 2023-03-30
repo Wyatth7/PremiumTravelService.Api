@@ -7,6 +7,6 @@ public class Bill
     public decimal Total { get; set; }
     public decimal RemainingBalance { get; set; }
     public bool IsPaidInFull { get; set; }
-    public IEnumerable<BillDetail> BillingDetails { get; set; }
-    public IEnumerable<Transaction> Transactions { get; set; }
+    public BillDetail[] BillingDetails { get; set; }
+    public Transaction[] Transactions { get; set; }
 }

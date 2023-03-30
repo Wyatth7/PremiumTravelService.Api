@@ -1,4 +1,5 @@
-﻿using PremiumTravelService.Api.Persistence;
+﻿using System.Xml.Serialization;
+using PremiumTravelService.Api.Persistence;
 using PremiumTravelService.Api.Persistence.Entities;
 
 namespace PremiumTravelService.Api.DataStorage.DataHandling;
@@ -17,7 +18,11 @@ public class XmlReadWrite : IFileReadWrite<Trip>
     
     public async Task<Trip> Read()
     {
-        var xml = new System.Xml.Serialization.XmlSerializer(typeof(TestModel));
+        var xRoot = new XmlRootAttribute();
+        xRoot.ElementName = "Trip";
+        xRoot.IsNullable = true;
+        
+        var xml = new System.Xml.Serialization.XmlSerializer(typeof(Trip), xRoot);
         await using FileStream readStream = File.OpenRead(_path);
         var xmlData = xml.Deserialize(readStream);
         

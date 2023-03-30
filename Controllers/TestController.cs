@@ -11,18 +11,18 @@ public class TestController : BaseApiController
     [Consumes("application/json")]
     public async Task<IActionResult> TestJsonWrite([FromBody] Trip trip)
     {
-        // var jsonReaderWriter = new JsonReadWrite();
-        //
-        // await jsonReaderWriter.Write(new TestModel {Name = "maddy", Age = 20});
-        //
-        // var readData = await jsonReaderWriter.Read();
-
-        var xmlReaderWriter = new XmlReadWrite();
-
-        await xmlReaderWriter.Write(trip);
-
-        var readData = await xmlReaderWriter.Read();
+        var jsonReaderWriter = new JsonReadWrite();
         
-        return new OkResult();
+        await jsonReaderWriter.Write(trip);
+        
+        var readData = await jsonReaderWriter.Read();
+
+        // var xmlReaderWriter = new XmlReadWrite();
+        //
+        // await xmlReaderWriter.Write(trip);
+        //
+        // var readData = await xmlReaderWriter.Read();
+        //
+        return new OkObjectResult(readData);
     }
 }
