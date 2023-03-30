@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PremiumTravelService.Api.DataStorage.DataHandling;
-using PremiumTravelService.Api.Persistence;
 using PremiumTravelService.Api.Persistence.Entities;
 
 namespace PremiumTravelService.Api.Controllers;
