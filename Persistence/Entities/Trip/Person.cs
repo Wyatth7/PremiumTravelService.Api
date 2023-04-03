@@ -1,4 +1,4 @@
-﻿namespace PremiumTravelService.Api.Persistence.Entities;
+﻿namespace PremiumTravelService.Api.Persistence.Entities.Trip;
 
 public class Person
 {
@@ -7,6 +7,7 @@ public class Person
     public string LastName { get; set; }
     public string Email { get; set; }
     public string Phone { get; set; }
+    public bool IsEmployee { get; set; }
 
     public string NameFull => $"{FirstName} {LastName}";
 }

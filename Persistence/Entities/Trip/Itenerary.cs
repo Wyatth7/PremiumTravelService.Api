@@ -1,4 +1,4 @@
-﻿namespace PremiumTravelService.Api.Persistence.Entities;
+﻿namespace PremiumTravelService.Api.Persistence.Entities.Trip;
 
 public class Itenerary
 {

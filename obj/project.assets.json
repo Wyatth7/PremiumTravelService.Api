@@ -460,31 +460,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\whard\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/wyatthardin/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\premium-travel-service-clones\\web\\web-pre-sc\\PremiumTravelService.Api\\PremiumTravelService.Api.csproj",
+      "projectUniqueName": "/Users/wyatthardin/PremiumTravelService/PremiumTravelService.Api/PremiumTravelService.Api.csproj",
       "projectName": "PremiumTravelService.Api",
-      "projectPath": "E:\\premium-travel-service-clones\\web\\web-pre-sc\\PremiumTravelService.Api\\PremiumTravelService.Api.csproj",
-      "packagesPath": "C:\\Users\\whard\\.nuget\\packages\\",
-      "outputPath": "E:\\premium-travel-service-clones\\web\\web-pre-sc\\PremiumTravelService.Api\\obj\\",
+      "projectPath": "/Users/wyatthardin/PremiumTravelService/PremiumTravelService.Api/PremiumTravelService.Api.csproj",
+      "packagesPath": "/Users/wyatthardin/.nuget/packages/",
+      "outputPath": "/Users/wyatthardin/PremiumTravelService/PremiumTravelService.Api/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\whard\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/wyatthardin/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -531,7 +524,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
       }
     }
   }

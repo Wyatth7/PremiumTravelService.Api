@@ -1,6 +1,6 @@
-﻿using PremiumTravelService.Api.Persistence.Entities.Bills;
+﻿using PremiumTravelService.Api.Persistence.Entities.Trip.Bills;
 
-namespace PremiumTravelService.Api.Persistence.Entities;
+namespace PremiumTravelService.Api.Persistence.Entities.Trip;
 
 public class Trip
 {

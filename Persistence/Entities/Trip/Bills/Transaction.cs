@@ -1,6 +1,6 @@
-﻿using PremiumTravelService.Api.Persistence.Entities.Bills.CardInformation;
+﻿using PremiumTravelService.Api.Persistence.Entities.Trip.Bills.CardInformation;
 
-namespace PremiumTravelService.Api.Persistence.Entities.Bills;
+namespace PremiumTravelService.Api.Persistence.Entities.Trip.Bills;
 
 public class Transaction
 {

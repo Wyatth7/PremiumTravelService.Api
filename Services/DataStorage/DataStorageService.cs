@@ -3,6 +3,7 @@ using System.Xml.Serialization;
 using Microsoft.Extensions.Options;
 using PremiumTravelService.Api.Models.Options;
 using PremiumTravelService.Api.Persistence.Entities;
+using PremiumTravelService.Api.Persistence.Entities.Trip;
 
 namespace PremiumTravelService.Api.Services.DataStorage;
 
@@ -35,21 +36,19 @@ public class DataStorageService : IDataStorageService
         {
             return await JsonRead();
         }
-        else
-        {
-            return await XmlRead();
-        }
+        
+        return await XmlRead();
     }
     
     private async Task JsonWrite(Trip payload) {
         var options = new JsonSerializerOptions {WriteIndented = true};
-        await using FileStream writeStream = File.OpenWrite(_path);
+        await using var writeStream = File.OpenWrite(_path);
         await JsonSerializer.SerializeAsync(writeStream, payload, options).ConfigureAwait(false); ;
         await writeStream.DisposeAsync().ConfigureAwait(false);
     }
 
     private async Task<Trip> JsonRead() {
-        await using FileStream readStream = File.OpenRead(_path);
+        await using var readStream = File.OpenRead(_path);
         var data = await JsonSerializer.DeserializeAsync<Trip>(readStream).ConfigureAwait(false);
 
         return data ?? new Trip();
@@ -58,7 +57,7 @@ public class DataStorageService : IDataStorageService
     private async Task XmlWrite(Trip payload)
     {
         var xml = new System.Xml.Serialization.XmlSerializer(payload.GetType());
-        await using FileStream writeStream = File.OpenWrite(_path);
+        await using var writeStream = File.OpenWrite(_path);
         xml.Serialize(writeStream, payload);
         await writeStream.DisposeAsync();
     }
@@ -70,15 +69,15 @@ public class DataStorageService : IDataStorageService
         xRoot.IsNullable = true;
         
         var xml = new System.Xml.Serialization.XmlSerializer(typeof(Trip), xRoot);
-        await using FileStream readStream = File.OpenRead(_path);
+        await using var readStream = File.OpenRead(_path);
         var xmlData = xml.Deserialize(readStream);
         
         if (xmlData is null) return new Trip();
 
-        var testModelData = (Trip) xmlData;
+        var tripData = (Trip) xmlData;
         
         await readStream.DisposeAsync();
         
-        return testModelData;
+        return tripData;
     }
 }

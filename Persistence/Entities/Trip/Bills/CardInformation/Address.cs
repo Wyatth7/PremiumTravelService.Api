@@ -1,4 +1,4 @@
-﻿namespace PremiumTravelService.Api.Persistence.Entities.Bills.CardInformation;
+﻿namespace PremiumTravelService.Api.Persistence.Entities.Trip.Bills.CardInformation;
 
 public class Address
 {
