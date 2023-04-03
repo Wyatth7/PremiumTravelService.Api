@@ -1,4 +1,4 @@
-namespace PremiumTravelService.Api.Persistence.Entities.StateMacine;
+namespace PremiumTravelService.Api.Persistence.Entities.StateMachine;
 
 public class TripState
 {

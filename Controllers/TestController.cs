@@ -17,9 +17,9 @@ public class TestController : BaseApiController
     
     [HttpPost]
     [Consumes("application/json")]
-    public async Task<IActionResult> TestJsonWrite([FromBody] Trip trip)
+    public async Task<IActionResult> TestJsonWrite([FromBody] StorageData storageData)
     {
-        await _dataStorageService.Write(trip);
+        await _dataStorageService.Write(storageData);
 
         var readData = await _dataStorageService.Read();
         

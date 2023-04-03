@@ -5,6 +5,6 @@ namespace PremiumTravelService.Api.Services.DataStorage;
 
 public interface IDataStorageService
 {
-    Task Write(Trip payload);
-    Task<Trip> Read();
+    Task Write(StorageData payload);
+    Task<StorageData> Read();
 }
