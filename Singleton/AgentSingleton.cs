@@ -2,7 +2,6 @@
 using PremiumTravelService.Api.DataStorage.FileHandling;
 using PremiumTravelService.Api.Models;
 using PremiumTravelService.Api.Persistence.Entities.Trip;
-using PremiumTravelService.Api.Services.DataStorage;
 
 namespace PremiumTravelService.Api.Singleton;
 
