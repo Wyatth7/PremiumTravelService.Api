@@ -1,7 +1,41 @@
 {
-  "trips": [],
-  "stateMachines": [],
-  "agents": [],
-  "travellers": [],
-  "packages": []
+  "Trips": [],
+  "StateMachines": [],
+  "Agents": [
+    {
+      "PersonId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "FirstName": "maddy",
+      "LastName": "crowley",
+      "Email": "email@test.com",
+      "Phone": "1234567890",
+      "IsEmployee": true
+    },
+    {
+      "PersonId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "FirstName": "wyatt",
+      "LastName": "hardin",
+      "Email": "email@test222.com",
+      "Phone": "1234567890",
+      "IsEmployee": true
+    }
+  ],
+  "Travellers": [
+    {
+      "PersonId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "FirstName": "Trav1",
+      "LastName": "crowley",
+      "Email": "email@test.com",
+      "Phone": "1234567890",
+      "IsEmployee": true
+    },
+    {
+      "PersonId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "FirstName": "Trav2",
+      "LastName": "hardin",
+      "Email": "email@test222.com",
+      "Phone": "1234567890",
+      "IsEmployee": true
+    }
+  ],
+  "Packages": []
 }

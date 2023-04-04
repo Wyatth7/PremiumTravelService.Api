@@ -1,4 +1,5 @@
-﻿using PremiumTravelService.Api.Persistence.Entities.StateMachine;
+﻿using System.Text.Json.Serialization;
+using PremiumTravelService.Api.Persistence.Entities.StateMachine;
 using PremiumTravelService.Api.Persistence.Entities.Trip;
 
 namespace PremiumTravelService.Api.Persistence.Entities;

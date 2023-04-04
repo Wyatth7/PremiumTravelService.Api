@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\premium-travel-service-clones\\web\\web-pre-sc\\PremiumTravelService.Api\\PremiumTravelService.Api.csproj": {}
+    "E:\\premium-travel-service-clones\\web\\merge-hell\\PremiumTravelService.Api\\PremiumTravelService.Api.csproj": {}
   },
   "projects": {
-    "E:\\premium-travel-service-clones\\web\\web-pre-sc\\PremiumTravelService.Api\\PremiumTravelService.Api.csproj": {
+    "E:\\premium-travel-service-clones\\web\\merge-hell\\PremiumTravelService.Api\\PremiumTravelService.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\premium-travel-service-clones\\web\\web-pre-sc\\PremiumTravelService.Api\\PremiumTravelService.Api.csproj",
+        "projectUniqueName": "E:\\premium-travel-service-clones\\web\\merge-hell\\PremiumTravelService.Api\\PremiumTravelService.Api.csproj",
         "projectName": "PremiumTravelService.Api",
-        "projectPath": "E:\\premium-travel-service-clones\\web\\web-pre-sc\\PremiumTravelService.Api\\PremiumTravelService.Api.csproj",
+        "projectPath": "E:\\premium-travel-service-clones\\web\\merge-hell\\PremiumTravelService.Api\\PremiumTravelService.Api.csproj",
         "packagesPath": "C:\\Users\\whard\\.nuget\\packages\\",
-        "outputPath": "E:\\premium-travel-service-clones\\web\\web-pre-sc\\PremiumTravelService.Api\\obj\\",
+        "outputPath": "E:\\premium-travel-service-clones\\web\\merge-hell\\PremiumTravelService.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

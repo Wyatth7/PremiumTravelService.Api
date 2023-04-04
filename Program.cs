@@ -1,12 +1,8 @@
 using PremiumTravelService.Api.Models.Options;
 using PremiumTravelService.Api.Services.DataStorage;
+using PremiumTravelService.Api.Services.Singleton;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// builder.Configuration.SetBasePath(Directory.GetCurrentDirectory());
-// builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-// builder.Configuration.AddJsonFile("appsettings.Development.json", optional: false, reloadOnChange: true);
-// builder.Configuration.AddEnvironmentVariables();
 
 // Add services to the container.
 
@@ -16,6 +12,7 @@ builder.Services
     );
 
 builder.Services.AddTransient<IDataStorageService, DataStorageService>();
+builder.Services.AddTransient<ISingletonService, SingletonService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
