@@ -16,7 +16,7 @@ public class DataStorageService : IDataStorageService
     private readonly StorageFactory _storageFactory = new();
     private readonly FileHandler _fileHandler;
 
-    public DataStorageService(IOptions<DataStorageOptions> options)
+    public DataStorageService(IOptionsSnapshot<DataStorageOptions> options)
     {
         _dataStorageOptions = options.Value;
         _path = Path.GetFullPath(_dataStorageOptions.FilePath);

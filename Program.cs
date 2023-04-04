@@ -3,6 +3,11 @@ using PremiumTravelService.Api.Services.DataStorage;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// builder.Configuration.SetBasePath(Directory.GetCurrentDirectory());
+// builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+// builder.Configuration.AddJsonFile("appsettings.Development.json", optional: false, reloadOnChange: true);
+// builder.Configuration.AddEnvironmentVariables();
+
 // Add services to the container.
 
 builder.Services

@@ -1,7 +1,7 @@
 {
   "trips": [],
   "stateMachines": [],
-  "Travellers": [],
-  "Agents": [],
-  "Packages": []
+  "agents": [],
+  "travellers": [],
+  "packages": []
 }
