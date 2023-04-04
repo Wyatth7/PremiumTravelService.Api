@@ -1,11 +1,8 @@
-﻿using System.Text.Json;
-using System.Xml.Serialization;
-using Microsoft.Extensions.Options;
+﻿using Microsoft.Extensions.Options;
 using PremiumTravelService.Api.DataStorage.FileHandling;
 using PremiumTravelService.Api.Factory;
 using PremiumTravelService.Api.Models.Options;
 using PremiumTravelService.Api.Persistence.Entities;
-using PremiumTravelService.Api.Persistence.Entities.Trip;
 
 namespace PremiumTravelService.Api.Services.DataStorage;
 
