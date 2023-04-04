@@ -6,8 +6,13 @@ namespace PremiumTravelService.Api.DataStorage.FileHandling;
 
 public class XmlFileHandler : FileHandler
 {
+    /// <summary>
+    /// Reads and writes data to xml file.
+    /// Subclass of <see cref="FileHandler"/>.
+    /// </summary>
     public override async Task Write(StorageData payload, string path)
     {
+        await File.WriteAllTextAsync(path, "");
         var xml = new System.Xml.Serialization.XmlSerializer(payload.GetType());
         await using var writeStream = File.OpenWrite(path);
         xml.Serialize(writeStream, payload);
