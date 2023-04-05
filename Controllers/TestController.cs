@@ -3,6 +3,7 @@ using PremiumTravelService.Api.Persistence.Entities;
 using PremiumTravelService.Api.Persistence.Entities.Trip;
 using PremiumTravelService.Api.Services.DataStorage;
 using PremiumTravelService.Api.Services.Singleton;
+using PremiumTravelService.Api.Services.StateMachine;
 
 namespace PremiumTravelService.Api.Controllers;
 
@@ -11,12 +12,15 @@ public class TestController : BaseApiController
 
     private readonly IDataStorageService _dataStorageService;
     private readonly ISingletonService _singletonService;
-
+    private readonly IStateMachineService _stateMachineService;
+    
     public TestController(IDataStorageService dataStorageService,
-        ISingletonService singletonService)
+        ISingletonService singletonService,
+        IStateMachineService stateMachineService)
     {
         _dataStorageService = dataStorageService;
         _singletonService = singletonService;
+        _stateMachineService = stateMachineService;
     }
     
     [HttpPost]
@@ -47,5 +51,18 @@ public class TestController : BaseApiController
         var packages = await packageSingleton.GetData();
         
         return new OkObjectResult(new {Packages = packages, Travellers = travellers, Agents = agents});
+    }
+
+    [HttpGet]
+    [Route("statemachine")]
+    [Produces("application/json")]
+    public async Task<IActionResult> TestStateMachine()
+    {
+        await _stateMachineService.CreateState();
+
+        await _stateMachineService.PauseState();
+
+        var data = await _dataStorageService.Read();
+        return new OkObjectResult(data);
     }
 }

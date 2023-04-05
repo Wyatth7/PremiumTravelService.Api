@@ -1,22 +1,58 @@
 {
-  "Trips": [],
-  "StateMachines": [],
-  "Agents": [
+  "Trips": [
     {
-      "PersonId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-      "FirstName": "maddy",
-      "LastName": "crowley",
-      "Email": "email@test.com",
-      "Phone": "1234567890",
-      "IsEmployee": true
+      "TripId": "00000000-0000-0000-0000-000000000000",
+      "Travellers": null,
+      "Bill": null,
+      "Itenerary": null,
+      "ThankYouNote": null
     },
     {
-      "PersonId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-      "FirstName": "wyatt",
-      "LastName": "hardin",
-      "Email": "email@test222.com",
-      "Phone": "1234567890",
-      "IsEmployee": true
+      "TripId": "724ef76a-d83c-418e-ab7f-8e11f038b2b2",
+      "Travellers": null,
+      "Bill": null,
+      "Itenerary": null,
+      "ThankYouNote": null
+    },
+    {
+      "TripId": "d179129f-bb5a-4396-bdb4-abb5f0fc62d7",
+      "Travellers": null,
+      "Bill": null,
+      "Itenerary": null,
+      "ThankYouNote": null
+    },
+    {
+      "TripId": "db0ae5e2-23ea-46ae-b531-833edabb1db4",
+      "Travellers": null,
+      "Bill": null,
+      "Itenerary": null,
+      "ThankYouNote": null
+    }
+  ],
+  "StateMachines": [
+    {
+      "TripId": "00000000-0000-0000-0000-000000000000",
+      "CurrentState": 0,
+      "IsComplete": false,
+      "IsStarted": true
+    },
+    {
+      "TripId": "724ef76a-d83c-418e-ab7f-8e11f038b2b2",
+      "CurrentState": 0,
+      "IsComplete": false,
+      "IsStarted": true
+    },
+    {
+      "TripId": "d179129f-bb5a-4396-bdb4-abb5f0fc62d7",
+      "CurrentState": 0,
+      "IsComplete": false,
+      "IsStarted": true
+    },
+    {
+      "TripId": "db0ae5e2-23ea-46ae-b531-833edabb1db4",
+      "CurrentState": 0,
+      "IsComplete": false,
+      "IsStarted": true
     }
   ],
   "Travellers": [
@@ -26,7 +62,8 @@
       "LastName": "crowley",
       "Email": "email@test.com",
       "Phone": "1234567890",
-      "IsEmployee": true
+      "IsEmployee": true,
+      "NameFull": "Trav1 crowley"
     },
     {
       "PersonId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
@@ -34,21 +71,42 @@
       "LastName": "hardin",
       "Email": "email@test222.com",
       "Phone": "1234567890",
-      "IsEmployee": true
+      "IsEmployee": true,
+      "NameFull": "Trav2 hardin"
+    }
+  ],
+  "Agents": [
+    {
+      "PersonId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "FirstName": "maddy",
+      "LastName": "crowley",
+      "Email": "email@test.com",
+      "Phone": "1234567890",
+      "IsEmployee": true,
+      "NameFull": "maddy crowley"
+    },
+    {
+      "PersonId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "FirstName": "wyatt",
+      "LastName": "hardin",
+      "Email": "email@test222.com",
+      "Phone": "1234567890",
+      "IsEmployee": true,
+      "NameFull": "wyatt hardin"
     }
   ],
   "Packages": [
     {
       "TripDetailId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-      "TripStart": "2023-04-04T20:44:58.186Z",
-      "TripEnd": "2023-04-04T20:44:58.186Z",
+      "TripStart": "2023-04-04T20:44:58.186+00:00",
+      "TripEnd": "2023-04-04T20:44:58.186+00:00",
       "Description": "wow 1",
       "Total": 1000
     },
     {
       "TripDetailId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-      "TripStart": "2023-04-04T20:44:58.186Z",
-      "TripEnd": "2023-04-04T20:44:58.186Z",
+      "TripStart": "2023-04-04T20:44:58.186+00:00",
+      "TripEnd": "2023-04-04T20:44:58.186+00:00",
       "Description": "wow2",
       "Total": 5000
     }

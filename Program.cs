@@ -1,6 +1,7 @@
 using PremiumTravelService.Api.Models.Options;
 using PremiumTravelService.Api.Services.DataStorage;
 using PremiumTravelService.Api.Services.Singleton;
+using PremiumTravelService.Api.Services.StateMachine;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,7 @@ builder.Services
 
 builder.Services.AddTransient<IDataStorageService, DataStorageService>();
 builder.Services.AddTransient<ISingletonService, SingletonService>();
+builder.Services.AddScoped<IStateMachineService, StateMachineService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
