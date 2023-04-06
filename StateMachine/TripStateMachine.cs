@@ -19,6 +19,9 @@ public class TripStateMachine
         _dataStorageService = dataStorageService;
     }
     
+    /// <summary>
+    /// Creates the start of a trip state
+    /// </summary>
     public async Task CreateState()
     {
         TripState = new()
@@ -36,8 +39,8 @@ public class TripStateMachine
     /// <summary>
     /// Resumes trip state machine, or notifies if state is completed
     /// </summary>
-    /// <param name="tripId"></param>
-    /// <returns></returns>
+    /// <param name="tripId">Trip Id to resume</param>
+    /// <returns>Itinerary if completed, true if complete </returns>
     public async Task<(Itinerary, bool)> ResumeState(Guid tripId, object payload)
     {
         // get state
@@ -64,6 +67,9 @@ public class TripStateMachine
         return (null, false);
     }
 
+    /// <summary>
+    /// Goes to next state
+    /// </summary>
     public void NextState()
     {
         // if completed, return
@@ -77,6 +83,14 @@ public class TripStateMachine
         TripState.CurrentState = (StateType) ((int) TripState.CurrentState + 1);
     }
     
+    /// <summary>
+    /// Handles the process of the current state
+    /// </summary>
+    /// <param name="payload">Data to send to process</param>
+    /// <param name="isNew">Is trip new?</param>
+    /// <param name="shouldGoNext">Should next be called after process completes</param>
+    /// <typeparam name="TPayload">Type of payload</typeparam>
+    /// <exception cref="NullReferenceException">Null exception</exception>
     private async Task HandleProcess<TPayload>(TPayload payload, bool isNew = false, bool shouldGoNext = false)
     {
         if (payload is null) throw new NullReferenceException("A state payload cannot be null.");
@@ -102,6 +116,10 @@ public class TripStateMachine
         await SaveTripState(trip);
     }
 
+    /// <summary>
+    /// Saves trip data and state machine data
+    /// </summary>
+    /// <param name="trip">Trip to save</param>
     private async Task SaveTripState(Trip trip)
     {
         var storageData = await _dataStorageService.Read();
