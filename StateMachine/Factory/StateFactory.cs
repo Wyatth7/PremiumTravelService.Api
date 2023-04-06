@@ -9,6 +9,7 @@ public sealed class StateFactory
         return stateType switch
         {
             StateType.Create => new CreateState(),
+            StateType.Travellers => new TravellerState(),
             _ => new CreateState()
         };
     }

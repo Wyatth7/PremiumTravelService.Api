@@ -31,9 +31,6 @@ public class TripStateMachine
         _currentState = StateFactory.CreateStateInstance(StateType.Create);
 
         await HandleProcess(TripState.TripId.ToString(), true, true);
-        
-        var trip = await _dataStorageService.FetchTrip(TripState.TripId);
-        await SaveTripState(trip);
     }
     
     /// <summary>
@@ -41,15 +38,15 @@ public class TripStateMachine
     /// </summary>
     /// <param name="tripId"></param>
     /// <returns></returns>
-    public async Task<bool> ResumeState(Guid tripId)
+    public async Task<(Itinerary, bool)> ResumeState(Guid tripId, object payload)
     {
         // get state
-        var currentState = await _dataStorageService.Read();
+        var storageData = await _dataStorageService.Read();
 
-        var stateMachine = currentState.StateMachines
+        var stateMachine = storageData.StateMachines
             .FirstOrDefault(sm => sm.TripId == tripId);
         
-        var trip = currentState.Trips
+        var trip = storageData.Trips
             .FirstOrDefault(trip => trip.TripId == tripId);
         
         // if complete, return complete state
@@ -57,24 +54,14 @@ public class TripStateMachine
             throw new NullReferenceException("The trip requested does not exist.");
 
         // load current state
-        if (stateMachine.IsComplete) return true;
+        if (stateMachine.IsComplete) return (new(), true);
 
         TripState = stateMachine;
         _currentState = StateFactory.CreateStateInstance(TripState.CurrentState);
+
+        await HandleProcess(payload);
         
-        // navigate to last left off state 
-        // I think I'll have to create a new state object
-        // don't know if that's right though.
-        
-        // I think what needs to be done is I need to make a factory
-        // that will generate a state.
-        
-        // this isn't anything too fancy.
-        // all i think i have to do is pass in some model data for the current state
-        // then let the state object handle the rest.
-        
-        // this return value is just for now, change later
-        return false;
+        return (null, false);
     }
 
     public void NextState()
@@ -88,9 +75,6 @@ public class TripStateMachine
         
         // move to next state
         TripState.CurrentState = (StateType) ((int) TripState.CurrentState + 1);
-
-        // var state = StateFactory.CreateState(TripState.CurrentState);
-        // state.Process()
     }
     
     private async Task HandleProcess<TPayload>(TPayload payload, bool isNew = false, bool shouldGoNext = false)

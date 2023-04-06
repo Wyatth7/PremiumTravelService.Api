@@ -58,8 +58,11 @@ public class TestController : BaseApiController
     [Produces("application/json")]
     public async Task<IActionResult> TestStateMachine()
     {
-        await _stateMachineService.CreateState();
+        // await _stateMachineService.CreateState();
 
+        await _stateMachineService.ResumeState(Guid.Parse("5a3cb3be-e55f-4468-a48e-8940b10741df"),
+            new Person {PersonId = Guid.NewGuid(), FirstName = "wyatt", LastName = "Hardin"});
+        
         var data = await _dataStorageService.Read();
         return new OkObjectResult(data);
     }

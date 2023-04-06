@@ -13,15 +13,11 @@ public class StateMachineService : IStateMachineService
         _tripStateMachine = new TripStateMachine(dataStorageService);
     }
     
-    public async Task<(Itinerary, bool)> ResumeState(Guid tripId)
+    public async Task<(Itinerary, bool)> ResumeState(Guid tripId, object payload)
     {
         try
         {
-            var isCompleted = await _tripStateMachine.ResumeState(tripId);
-            
-            // get completed state (not implemented yet)
-
-            return (new(), true);
+            return await _tripStateMachine.ResumeState(tripId, payload);
         }
         catch (Exception e)
         {

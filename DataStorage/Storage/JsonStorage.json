@@ -6,11 +6,54 @@
       "Bill": null,
       "Itinerary": null,
       "ThankYouNote": null
+    },
+    {
+      "TripId": "35d1b088-e5ed-4602-bf1d-741fb593c7a2",
+      "Travellers": null,
+      "Bill": null,
+      "Itinerary": null,
+      "ThankYouNote": null
+    },
+    {
+      "TripId": "5a3cb3be-e55f-4468-a48e-8940b10741df",
+      "Travellers": [
+        {
+          "PersonId": "00000000-0000-0000-0000-000000000000",
+          "FirstName": "wyatt",
+          "LastName": "Hardin",
+          "Email": null,
+          "Phone": null,
+          "IsEmployee": false,
+          "NameFull": "wyatt Hardin"
+        },
+        {
+          "PersonId": "135fcc53-bb23-4987-ab41-cb05d3288f78",
+          "FirstName": "wyatt",
+          "LastName": "Hardin",
+          "Email": null,
+          "Phone": null,
+          "IsEmployee": false,
+          "NameFull": "wyatt Hardin"
+        }
+      ],
+      "Bill": null,
+      "Itinerary": null,
+      "ThankYouNote": null
     }
   ],
   "StateMachines": [
     {
       "TripId": "f4e8a12b-5e77-467c-a577-c94b8118894c",
+      "CurrentState": 1,
+      "IsComplete": false
+    },
+    {
+      "TripId": "35d1b088-e5ed-4602-bf1d-741fb593c7a2",
+      "CurrentState": 1,
+      "IsComplete": false
+    },
+    {
+      "TripId": "5a3cb3be-e55f-4468-a48e-8940b10741df",
       "CurrentState": 1,
       "IsComplete": false
     }
