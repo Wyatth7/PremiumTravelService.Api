@@ -10,6 +10,7 @@ public sealed class StateFactory
         {
             StateType.Create => new CreateState(),
             StateType.Travellers => new TravellerState(),
+            StateType.Packages => new PackagesState(),
             _ => new CreateState()
         };
     }

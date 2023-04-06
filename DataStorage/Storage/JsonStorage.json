@@ -3,6 +3,7 @@
     {
       "TripId": "f4e8a12b-5e77-467c-a577-c94b8118894c",
       "Travellers": null,
+      "Packages": null,
       "Bill": null,
       "Itinerary": null,
       "ThankYouNote": null
@@ -10,6 +11,7 @@
     {
       "TripId": "35d1b088-e5ed-4602-bf1d-741fb593c7a2",
       "Travellers": null,
+      "Packages": null,
       "Bill": null,
       "Itinerary": null,
       "ThankYouNote": null
@@ -36,6 +38,15 @@
           "NameFull": "wyatt Hardin"
         }
       ],
+      "Packages": [
+        {
+          "TripDetailId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+          "TripStart": "2023-04-06T04:56:19.81+00:00",
+          "TripEnd": "2023-04-06T04:56:19.81+00:00",
+          "Description": "This is a test description.",
+          "Total": 599.99
+        }
+      ],
       "Bill": null,
       "Itinerary": null,
       "ThankYouNote": null
@@ -54,11 +65,19 @@
     },
     {
       "TripId": "5a3cb3be-e55f-4468-a48e-8940b10741df",
-      "CurrentState": 1,
+      "CurrentState": 2,
       "IsComplete": false
     }
   ],
   "Travellers": [],
   "Agents": [],
-  "Packages": []
+  "Packages": [
+    {
+      "TripDetailId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+      "TripStart": "2023-04-06T04:56:19.81+00:00",
+      "TripEnd": "2023-04-06T04:56:19.81+00:00",
+      "Description": "This is a test description.",
+      "Total": 599.99
+    }
+  ]
 }

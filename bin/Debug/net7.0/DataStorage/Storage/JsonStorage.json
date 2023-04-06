@@ -25,6 +25,15 @@
           "Phone": null,
           "IsEmployee": false,
           "NameFull": "wyatt Hardin"
+        },
+        {
+          "PersonId": "135fcc53-bb23-4987-ab41-cb05d3288f78",
+          "FirstName": "wyatt",
+          "LastName": "Hardin",
+          "Email": null,
+          "Phone": null,
+          "IsEmployee": false,
+          "NameFull": "wyatt Hardin"
         }
       ],
       "Bill": null,
@@ -51,5 +60,13 @@
   ],
   "Travellers": [],
   "Agents": [],
-  "Packages": []
+  "Packages": [
+    {
+      "TripDetailId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+      "TripStart": "2023-04-06T04:56:19.810Z",
+      "TripEnd": "2023-04-06T04:56:19.810Z",
+      "Description": "This is a test description.",
+      "Total": 599.99
+    }
+  ]
 }

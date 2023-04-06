@@ -60,8 +60,13 @@ public class TestController : BaseApiController
     {
         // await _stateMachineService.CreateState();
 
+        var storageData = await _dataStorageService.Read();
+        var package = storageData.Packages
+            .FirstOrDefault(p => 
+                p.TripDetailId == Guid.Parse("8a3cb3be-e55f-4468-a48e-8940b10741df"));
+        
         await _stateMachineService.ResumeState(Guid.Parse("5a3cb3be-e55f-4468-a48e-8940b10741df"),
-            new Person {PersonId = Guid.NewGuid(), FirstName = "wyatt", LastName = "Hardin"});
+            package);
         
         var data = await _dataStorageService.Read();
         return new OkObjectResult(data);
