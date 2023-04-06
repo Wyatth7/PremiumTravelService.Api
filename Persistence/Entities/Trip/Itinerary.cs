@@ -1,6 +1,6 @@
 ﻿namespace PremiumTravelService.Api.Persistence.Entities.Trip;
 
-public class Itenerary
+public class Itinerary
 {
     public Guid IteneraryId { get; set; }
     public DateTimeOffset TripStart { get; set; }

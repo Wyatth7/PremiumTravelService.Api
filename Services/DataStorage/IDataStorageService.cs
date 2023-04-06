@@ -1,4 +1,6 @@
-﻿using PremiumTravelService.Api.Persistence.Entities;
+﻿using PremiumTravelService.Api.DataStorage.FileHandling;
+using PremiumTravelService.Api.Persistence.Entities;
+using PremiumTravelService.Api.Persistence.Entities.StateMachine;
 using PremiumTravelService.Api.Persistence.Entities.Trip;
 
 namespace PremiumTravelService.Api.Services.DataStorage;
@@ -18,4 +20,18 @@ public interface IDataStorageService
     /// </summary>
     /// <returns>Storage data object</returns>
     Task<StorageData> Read();
+
+    /// <summary>
+    /// Fetches specific trip from storage
+    /// </summary>
+    /// <param name="tripId">Id of trip to fetch</param>
+    /// <returns>Trip or null</returns>
+    Task<Trip> FetchTrip(Guid tripId);
+
+    /// <summary>
+    /// Fetches specific trip state from storage
+    /// </summary>
+    /// <param name="tripId">Id of trip state to fetch</param>
+    /// <returns>trip state or null</returns>
+    Task<TripState> FetchTripState(Guid tripId);
 }

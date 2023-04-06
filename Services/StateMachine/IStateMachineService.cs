@@ -4,13 +4,9 @@ namespace PremiumTravelService.Api.Services.StateMachine;
 
 public interface IStateMachineService
 {
-    Task PauseState();
+    Task<(Itinerary, bool)> ResumeState(Guid tripId);
     
-    Task ResumeState(int tripId);
-    
-    Task NextState();
+    void NextState();
 
     Task CreateState();
-
-    Trip GetCurrentStateObject();
 }

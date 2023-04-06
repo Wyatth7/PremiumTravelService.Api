@@ -5,6 +5,7 @@ using PremiumTravelService.Api.DataStorage.FileHandling;
 using PremiumTravelService.Api.Factory;
 using PremiumTravelService.Api.Models.Options;
 using PremiumTravelService.Api.Persistence.Entities;
+using PremiumTravelService.Api.Persistence.Entities.StateMachine;
 using PremiumTravelService.Api.Persistence.Entities.Trip;
 
 namespace PremiumTravelService.Api.Services.DataStorage;
@@ -31,5 +32,21 @@ public class DataStorageService : IDataStorageService
     public async Task<StorageData> Read()
     {
         return await _fileHandler.Read(_path);
+    }
+    
+    public async Task<Trip> FetchTrip(Guid tripId)
+    {
+        var storageData = await Read();
+
+        return storageData.Trips
+            .FirstOrDefault(trip => trip.TripId == tripId);
+    }
+
+    public async Task<TripState> FetchTripState(Guid tripId)
+    {
+        var storageData = await Read();
+
+        return storageData.StateMachines
+            .FirstOrDefault(sm => sm.TripId == tripId);
     }
 }

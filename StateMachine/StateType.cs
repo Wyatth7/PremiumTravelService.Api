@@ -7,5 +7,5 @@ public enum StateType
     Packages = 2,
     Payment = 3,
     Note = 4,
-    Itinerary = 5
+    Itinerary = 5,
 }

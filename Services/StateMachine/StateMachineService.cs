@@ -13,29 +13,30 @@ public class StateMachineService : IStateMachineService
         _tripStateMachine = new TripStateMachine(dataStorageService);
     }
     
-    public async Task ResumeState(int tripId)
+    public async Task<(Itinerary, bool)> ResumeState(Guid tripId)
     {
-        await _tripStateMachine.ResumeState(tripId);
+        try
+        {
+            var isCompleted = await _tripStateMachine.ResumeState(tripId);
+            
+            // get completed state (not implemented yet)
+
+            return (new(), true);
+        }
+        catch (Exception e)
+        {
+            return (new(), false);
+        }
     }
 
-    public async Task PauseState()
+    public void NextState()
     {
-        await _tripStateMachine.PauseState();
-    }
-
-    public async Task NextState()
-    {
-        await _tripStateMachine.NextState();
+        _tripStateMachine.NextState();
     }
 
     public async Task CreateState()
     {
         // if there is a current state, null it and set a new one
         await _tripStateMachine.CreateState();
-    }
-
-    public Trip GetCurrentStateObject()
-    {
-        return _tripStateMachine.CurrentTrip;
     }
 }

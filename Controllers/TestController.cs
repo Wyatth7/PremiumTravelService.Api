@@ -60,8 +60,6 @@ public class TestController : BaseApiController
     {
         await _stateMachineService.CreateState();
 
-        await _stateMachineService.PauseState();
-
         var data = await _dataStorageService.Read();
         return new OkObjectResult(data);
     }
