@@ -13,7 +13,7 @@ public class StateMachineService : IStateMachineService
         _tripStateMachine = new TripStateMachine(dataStorageService);
     }
     
-    public async Task<(Itinerary, bool)> ResumeState(Guid tripId, object payload)
+    public async Task<Itinerary> ResumeState(Guid tripId, object payload)
     {
         try
         {
@@ -21,7 +21,7 @@ public class StateMachineService : IStateMachineService
         }
         catch (Exception e)
         {
-            return (new(), false);
+            return new();
         }
     }
 
