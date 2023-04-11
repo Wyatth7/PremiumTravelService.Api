@@ -93,15 +93,15 @@ public class TestController : BaseApiController
         //         .First(t => t.PersonId.Equals(Guid.Parse("8a3cb3be-e55f-4468-a48e-8940b10741df"))));
         
         //payment addition
-        var storageData = await _dataStorageService.Read();
-        await _stateMachineService.ResumeState(Guid.Parse("b6d8cd41-41b7-4383-8546-850ee6fea21c"),
-            new TransactionModel
-            {
-                PersonId = Guid.Parse("8a3cb3be-e55f-4468-a48e-8940b10741df"),
-                PaymentType = PaymentType.Cash,
-                Cash = new Cash(),
-                Total = 600
-            });
+        // var storageData = await _dataStorageService.Read();
+        // await _stateMachineService.ResumeState(Guid.Parse("b6d8cd41-41b7-4383-8546-850ee6fea21c"),
+        //     new TransactionModel
+        //     {
+        //         PersonId = Guid.Parse("8a3cb3be-e55f-4468-a48e-8940b10741df"),
+        //         PaymentType = PaymentType.Cash,
+        //         Cash = new Cash(),
+        //         Total = 600
+        //     });
         
         // new TransactionModel
         // {
@@ -126,6 +126,10 @@ public class TestController : BaseApiController
         //     Total = 150
         // }
         
+        // var storageData = await _dataStorageService.Read();
+        await _stateMachineService.ResumeState(Guid.Parse("b6d8cd41-41b7-4383-8546-850ee6fea21c"),
+            "This is a thank you note");
+
         var data = await _dataStorageService.Read();
         return new OkObjectResult(data);
     }

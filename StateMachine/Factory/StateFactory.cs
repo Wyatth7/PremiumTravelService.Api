@@ -18,6 +18,7 @@ public sealed class StateFactory
             StateType.Packages => new PackagesState(),
             StateType.PaymentPerson => new PaymentPersonState(),
             StateType.Payment => new PaymentState(),
+            StateType.Note => new NoteState(),
             _ => new CreateState()
         };
     }

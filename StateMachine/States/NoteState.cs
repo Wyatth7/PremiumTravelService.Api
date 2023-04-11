@@ -1,6 +1,12 @@
-﻿namespace PremiumTravelService.Api.StateMachine.States;
+﻿using PremiumTravelService.Api.Persistence.Entities.Trip;
 
-public class NoteState
+namespace PremiumTravelService.Api.StateMachine.States;
+
+public class NoteState : IState
 {
-    
+    public Trip Process(Trip trip, object payload)
+    {
+        trip.ThankYouNote = (string) payload;
+        return trip;
+    }
 }
