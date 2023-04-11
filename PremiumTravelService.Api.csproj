@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <Content Update="DataStorage\Storage\JsonStorage.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 

@@ -5,7 +5,8 @@ public enum StateType
     Create = 0,
     Travellers = 1,
     Packages = 2,
-    Payment = 3,
-    Note = 4,
-    Itinerary = 5,
+    PaymentPerson = 3,
+    Payment = 4,
+    Note = 5,
+    Itinerary = 6,
 }

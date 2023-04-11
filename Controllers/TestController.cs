@@ -1,6 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PremiumTravelService.Api.Models.Payment;
 using PremiumTravelService.Api.Persistence.Entities;
 using PremiumTravelService.Api.Persistence.Entities.Trip;
+using PremiumTravelService.Api.Persistence.Entities.Trip.Bills.CardInformation;
+using PremiumTravelService.Api.Persistence.Entities.Trip.Bills.ChargeInformation;
+using PremiumTravelService.Api.Persistence.Entities.Trip.Bills.CheckInformation;
+using PremiumTravelService.Api.Persistence.Enums;
 using PremiumTravelService.Api.Services.DataStorage;
 using PremiumTravelService.Api.Services.Singleton;
 using PremiumTravelService.Api.Services.StateMachine;
@@ -58,15 +63,68 @@ public class TestController : BaseApiController
     [Produces("application/json")]
     public async Task<IActionResult> TestStateMachine()
     {
+        //create
+        // var storageData = await _dataStorageService.Read();
         // await _stateMachineService.CreateState();
-
-        var storageData = await _dataStorageService.Read();
-        var package = storageData.Packages
-            .FirstOrDefault(p => 
-                p.TripDetailId == Guid.Parse("8a3cb3be-e55f-4468-a48e-8940b10741df"));
         
-        await _stateMachineService.ResumeState(Guid.Parse("5a3cb3be-e55f-4468-a48e-8940b10741df"),
-            package);
+        // _stateMachineService.NextState();
+
+        // travellers addition
+        //  var storageData = await _dataStorageService.Read();
+        //  await _stateMachineService.ResumeState(
+        //      storageData.Trips
+        //          .Select(t => t.TripId)
+        //          .First(t => t.Equals(Guid.Parse("b6d8cd41-41b7-4383-8546-850ee6fea21c"))),
+        //      storageData.Travellers[0]);
+        // _stateMachineService.NextState();
+
+        //packages addition
+        // var storageData = await _dataStorageService.Read();
+        // var package = storageData.Packages
+        //     .FirstOrDefault(p => 
+        //         p.TripDetailId == Guid.Parse("8a3cb3be-e55f-4468-a48e-8940b10741df"));
+        // await _stateMachineService.ResumeState(Guid.Parse("b6d8cd41-41b7-4383-8546-850ee6fea21c"),
+        //     package);
+        
+        //payment person addition
+        // var storageData = await _dataStorageService.Read();
+        // await _stateMachineService.ResumeState(Guid.Parse("b6d8cd41-41b7-4383-8546-850ee6fea21c"),
+        //     storageData.Travellers
+        //         .First(t => t.PersonId.Equals(Guid.Parse("8a3cb3be-e55f-4468-a48e-8940b10741df"))));
+        
+        //payment addition
+        var storageData = await _dataStorageService.Read();
+        await _stateMachineService.ResumeState(Guid.Parse("b6d8cd41-41b7-4383-8546-850ee6fea21c"),
+            new TransactionModel
+            {
+                PersonId = Guid.Parse("8a3cb3be-e55f-4468-a48e-8940b10741df"),
+                PaymentType = PaymentType.Cash,
+                Cash = new Cash(),
+                Total = 600
+            });
+        
+        // new TransactionModel
+        // {
+        //     PersonId = Guid.Parse("8a3cb3be-e55f-4468-a48e-8940b10741df"),
+        //     PaymentType = PaymentType.Card,
+        //     Card = new Card()
+        //     {
+        //         CardId = Guid.NewGuid(),
+        //         CardNumber = "4444555566667777",
+        //         ExpirationDate = DateTimeOffset.Now,
+        //         NameOnCard = "wyatt",
+        //         SecurityCode = "333",
+        //         Address = new Address
+        //         {
+        //             AddressId = Guid.NewGuid(),
+        //             City = "Chickamauga",
+        //             State = "ga",
+        //             Street = "test street 123",
+        //             ZipCode = "30707"
+        //         },
+        //     },
+        //     Total = 150
+        // }
         
         var data = await _dataStorageService.Read();
         return new OkObjectResult(data);

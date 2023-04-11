@@ -70,7 +70,7 @@ public class TripStateMachine
     /// <summary>
     /// Goes to next state
     /// </summary>
-    public void NextState()
+    public async Task NextState()
     {
         // if completed, return
         if (TripState.CurrentState == StateType.Itinerary)
@@ -81,6 +81,8 @@ public class TripStateMachine
         
         // move to next state
         TripState.CurrentState = (StateType) ((int) TripState.CurrentState + 1);
+
+        await SaveStateMachineStatus();
     }
     
     /// <summary>
@@ -110,7 +112,7 @@ public class TripStateMachine
 
         if (shouldGoNext)
         {
-            NextState();
+            await NextState();
         }
         
         await SaveTripState(trip);
@@ -129,12 +131,25 @@ public class TripStateMachine
         {
             storageData.Trips.Remove(storageData.Trips
                 .Single(oldTrip => oldTrip.TripId == trip.TripId));
-            
-            storageData.StateMachines.Remove(storageData.StateMachines.Single(sm => sm.TripId == trip.TripId));
         }
         
         storageData.Trips.Add(trip);
 
+        await SaveStateMachineStatus();
+
+        await _dataStorageService.Write(storageData);
+    }
+
+    private async Task SaveStateMachineStatus()
+    {
+        var storageData = await _dataStorageService.Read();
+
+        if (storageData.StateMachines.Any(sm => sm.TripId == TripState.TripId))
+        {
+            storageData.StateMachines.Remove(storageData.StateMachines
+                .Single(sm => sm.TripId == TripState.TripId));
+        }
+        
         storageData.StateMachines.Add(TripState);
 
         await _dataStorageService.Write(storageData);

@@ -7,7 +7,7 @@ public class Trip
     public Guid TripId { get; set; }
     public Person[] Travellers { get; set; }
     public Package[] Packages { get; set; }
-    public Bill Bill { get; set; }
+    public Payment Payment { get; set; }
     public Itinerary Itinerary { get; set; }
     public string ThankYouNote { get; set; }
 }
