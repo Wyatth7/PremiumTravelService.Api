@@ -133,4 +133,12 @@ public class TestController : BaseApiController
         var data = await _dataStorageService.Read();
         return new OkObjectResult(data);
     }
+
+    [HttpGet]
+    [Route("decorator")]
+    [Produces("application/json")]
+    public async Task<IActionResult> TestDecorator()
+    {
+        return Ok();
+    }
 }
