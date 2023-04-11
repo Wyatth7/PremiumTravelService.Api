@@ -10,7 +10,7 @@ public interface IStateMachineService
     /// <param name="tripId">Id of trip to resume</param>
     /// <param name="payload">Data to send to state</param>
     /// <returns>Itinerary if state is completed, true if complete</returns>
-    Task<(Itinerary, bool)> ResumeState(Guid tripId, object payload);
+    Task<Itinerary> ResumeState(Guid tripId, object payload);
     
     /// <summary>
     /// Move to next state

@@ -1,4 +1,4 @@
-﻿using PremiumTravelService.Api.StateMachine.States;
+using PremiumTravelService.Api.StateMachine.States;
 
 namespace PremiumTravelService.Api.StateMachine.Factory;
 

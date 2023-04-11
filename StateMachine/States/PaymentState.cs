@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using PremiumTravelService.Api.Models.Payment;
 using PremiumTravelService.Api.Persistence.Entities.Trip;
 using PremiumTravelService.Api.Persistence.Entities.Trip.Bills;

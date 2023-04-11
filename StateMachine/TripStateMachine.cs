@@ -41,7 +41,7 @@ public class TripStateMachine
     /// </summary>
     /// <param name="tripId">Trip Id to resume</param>
     /// <returns>Itinerary if completed, true if complete </returns>
-    public async Task<(Itinerary, bool)> ResumeState(Guid tripId, object payload)
+    public async Task<Itinerary> ResumeState(Guid tripId, object payload)
     {
         // get state
         var storageData = await _dataStorageService.Read();
@@ -57,14 +57,14 @@ public class TripStateMachine
             throw new NullReferenceException("The trip requested does not exist.");
 
         // load current state
-        if (stateMachine.IsComplete) return (new(), true);
+        if (stateMachine.IsComplete) return new();
 
         TripState = stateMachine;
         _currentState = StateFactory.CreateStateInstance(TripState.CurrentState);
 
         await HandleProcess(payload);
-        
-        return (null, false);
+
+        return null;
     }
 
     /// <summary>
