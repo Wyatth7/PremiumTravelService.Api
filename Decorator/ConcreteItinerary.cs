@@ -5,14 +5,9 @@ namespace PremiumTravelService.Api.Decorator;
 
 public class ConcreteItinerary : ItineraryBase
 {
-    public ConcreteItinerary()
+    public override async Task<Itinerary> PopulateItinerary(Trip _, Itinerary itinerary)
     {
+        itinerary.ThankYouNote = "test note";
+        return itinerary;
     }
-
-    public override async Task<Itinerary> PopulateItinerary()
-    {
-        base.Itinerary.ThankYouNote = "test note";
-        return base.Itinerary;
-    }
-
 }

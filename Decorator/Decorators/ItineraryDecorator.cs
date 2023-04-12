@@ -12,11 +12,11 @@ public class ItineraryDecorator : ItineraryBase
         ItineraryBase = itineraryBase;
     }
     
-    public override async Task<Itinerary> PopulateItinerary()
+    public override async Task<Itinerary> PopulateItinerary(Trip trip, Itinerary itinerary)
     {
         if (ItineraryBase is not null)
         {
-            return await ItineraryBase.PopulateItinerary();
+            return await ItineraryBase.PopulateItinerary(trip, itinerary);
         }
         else
         {

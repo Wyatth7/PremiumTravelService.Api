@@ -10,9 +10,13 @@ public class TravellerDecorator : ItineraryDecorator
         
     }
     
-    public async Task<Itinerary> PopulateItinerary()
+    public override async Task<Itinerary> PopulateItinerary(Trip trip, Itinerary itinerary)
     {
-        base.ItineraryBase.Itinerary.Travellers = new[] { "traveller 1" };
-        return await base.PopulateItinerary();
+        var travellers = trip.Travellers
+            .Select(t => t.NameFull).ToArray();
+        
+        // base.ItineraryBase.Itinerary.Travellers = travellers;
+        itinerary.Travellers = travellers;
+        return await base.PopulateItinerary(trip, itinerary);
     }
 }

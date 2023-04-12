@@ -1,4 +1,6 @@
-﻿namespace PremiumTravelService.Api.Persistence.Entities.Trip;
+﻿using System.Text.Json.Serialization;
+
+namespace PremiumTravelService.Api.Persistence.Entities.Trip;
 
 public class Package
 {

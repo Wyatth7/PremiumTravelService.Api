@@ -3,6 +3,7 @@ using PremiumTravelService.Api.Decorator;
 using PremiumTravelService.Api.Decorator.Decorators;
 using PremiumTravelService.Api.Models.Payment;
 using PremiumTravelService.Api.Persistence.Entities;
+using PremiumTravelService.Api.Persistence.Entities.Itinerary;
 using PremiumTravelService.Api.Persistence.Entities.Trip;
 using PremiumTravelService.Api.Persistence.Entities.Trip.Bills.CardInformation;
 using PremiumTravelService.Api.Persistence.Entities.Trip.Bills.ChargeInformation;
@@ -143,9 +144,13 @@ public class TestController : BaseApiController
     {
         var simple = new ConcreteItinerary();
 
-        var d1 = new TravellerDecorator(simple);
+        var travellers = new TravellerDecorator(simple);
+        var details = new TripDetailsDecorator(travellers);
 
-        var itinerary = await d1.PopulateItinerary();
+        var storageData = await _dataStorageService.Read();
+        
+
+        var itinerary = await details.PopulateItinerary(storageData.Trips.First(), new Itinerary());
         
         return new OkObjectResult(itinerary);
     }
