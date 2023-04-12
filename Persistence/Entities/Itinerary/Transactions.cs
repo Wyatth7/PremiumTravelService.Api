@@ -5,9 +5,12 @@ using PremiumTravelService.Api.Persistence.Enums;
 
 namespace PremiumTravelService.Api.Persistence.Entities.Itinerary;
 
-public class ItineraryBilling
+public class Transactions
 {
-    public decimal Total { get; set; }
-    public Transactions[] Transactions { get; set; }
-    public ItineraryBillingDetails[] BillingDetails { get; set; }
+    public string PaidByName { get; set; }
+    public PaymentType PaymentType { get; set; }
+    public Card Card { get; set; }
+    public Cash Cash { get; set; }
+    public Check Check { get; set; }
+    public decimal Amount { get; set; }
 }

@@ -12,8 +12,6 @@ public class TripDetailsDecorator : ItineraryDecorator
     
     public override async Task<Itinerary> PopulateItinerary(Trip trip, Itinerary itinerary)
     {
-        Console.WriteLine("here");
-        
         var tripDetails = trip.Packages
             .OrderBy(p => p.TripStart);
 

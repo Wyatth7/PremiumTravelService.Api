@@ -81,11 +81,14 @@
           {
             "TransactionId": "fd8adcaf-a693-44dd-91cc-73c886bd1ea5",
             "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-            "PaymentType": 1,
+            "PaymentType": 2,
             "Amount": 600,
-            "Card": null,
-            "Check": null,
-            "Cash": null
+            "Check": {
+              "CheckId": "fd8adcaf-a693-44dd-91cc-73c886bd1ea5",
+              "RoutingNumber": "123456",
+              "AccountNumber": "0000542",
+              "CheckNumber": "233"
+            }
           }
         ]
       },
