@@ -1,4 +1,5 @@
-﻿using PremiumTravelService.Api.Persistence.Entities.Trip;
+﻿using PremiumTravelService.Api.Persistence.Entities.Itinerary;
+using PremiumTravelService.Api.Persistence.Entities.Trip;
 
 namespace PremiumTravelService.Api.Services.StateMachine;
 

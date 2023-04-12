@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PremiumTravelService.Api.Decorator;
+using PremiumTravelService.Api.Decorator.Decorators;
 using PremiumTravelService.Api.Models.Payment;
 using PremiumTravelService.Api.Persistence.Entities;
 using PremiumTravelService.Api.Persistence.Entities.Trip;
@@ -139,6 +141,12 @@ public class TestController : BaseApiController
     [Produces("application/json")]
     public async Task<IActionResult> TestDecorator()
     {
-        return Ok();
+        var simple = new ConcreteItinerary();
+
+        var d1 = new TravellerDecorator(simple);
+
+        var itinerary = await d1.PopulateItinerary();
+        
+        return new OkObjectResult(itinerary);
     }
 }

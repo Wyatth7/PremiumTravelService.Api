@@ -90,13 +90,13 @@
         ]
       },
       "Itinerary": null,
-      "ThankYouNote": null
+      "ThankYouNote": "This is a thank you note"
     }
   ],
   "StateMachines": [
     {
       "TripId": "b6d8cd41-41b7-4383-8546-850ee6fea21c",
-      "CurrentState": 4,
+      "CurrentState": 5,
       "IsComplete": false
     }
   ],

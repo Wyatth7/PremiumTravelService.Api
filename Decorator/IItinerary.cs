@@ -1,6 +1,8 @@
-﻿namespace PremiumTravelService.Api.Decorator;
+﻿using PremiumTravelService.Api.Persistence.Entities.Itinerary;
+
+namespace PremiumTravelService.Api.Decorator;
 
 public interface IItinerary
 {
-    Task ShowItinerary();
+    Task<Itinerary> PopulateItinerary();
 }
