@@ -147,10 +147,11 @@ public class TestController : BaseApiController
         var travellers = new TravellerDecorator(simple);
         var details = new TripDetailsDecorator(travellers);
         var billing = new BillingDecorator(details);
+        var booking = new BookingDecorator(billing);
 
         var storageData = await _dataStorageService.Read();
         
-        var itinerary = await billing
+        var itinerary = await booking
             .PopulateItinerary(storageData.Trips.First(),
                 new Itinerary());
         

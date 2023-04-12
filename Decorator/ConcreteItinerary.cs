@@ -7,7 +7,6 @@ public class ConcreteItinerary : ItineraryBase
 {
     public override async Task<Itinerary> PopulateItinerary(Trip _, Itinerary itinerary)
     {
-        itinerary.ThankYouNote = "test note";
         return itinerary;
     }
 }

@@ -8,6 +8,5 @@ public class Trip
     public Person[] Travellers { get; set; }
     public Package[] Packages { get; set; }
     public Payment Payment { get; set; }
-    public Itinerary.Itinerary Itinerary { get; set; }
     public string ThankYouNote { get; set; }
 }
