@@ -4,6 +4,7 @@ namespace PremiumTravelService.Api.Persistence.Entities.Trip;
 
 public class Trip
 {
+    public Guid AssignedByPersonId { get; set; }
     public Guid TripId { get; set; }
     public Person[] Travellers { get; set; }
     public Package[] Packages { get; set; }
