@@ -68,7 +68,7 @@ public class TestController : BaseApiController
     {
         //create
         var storageData = await _dataStorageService.Read();
-        await _stateMachineService.CreateState();
+        await _stateMachineService.CreateState(Guid.NewGuid());
         
         // _stateMachineService.NextState();
 

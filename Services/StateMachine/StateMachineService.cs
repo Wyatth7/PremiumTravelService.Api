@@ -26,14 +26,14 @@ public class StateMachineService : IStateMachineService
         }
     }
 
-    public void NextState()
+    public async Task NextState()
     {
-        _tripStateMachine.NextState();
+        await _tripStateMachine.NextState();
     }
 
-    public async Task CreateState()
+    public async Task CreateState(Guid agentId)
     {
         // if there is a current state, null it and set a new one
-        await _tripStateMachine.CreateState();
+        await _tripStateMachine.CreateState(agentId);
     }
 }

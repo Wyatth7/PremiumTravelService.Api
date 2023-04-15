@@ -1,4 +1,5 @@
-﻿using PremiumTravelService.Api.Persistence.Entities.Itinerary;
+﻿using PremiumTravelService.Api.Models.State;
+using PremiumTravelService.Api.Persistence.Entities.Itinerary;
 using PremiumTravelService.Api.Persistence.Entities.StateMachine;
 using PremiumTravelService.Api.Persistence.Entities.Trip;
 using PremiumTravelService.Api.Services.DataStorage;
@@ -23,7 +24,7 @@ public class TripStateMachine
     /// <summary>
     /// Creates the start of a trip state
     /// </summary>
-    public async Task CreateState()
+    public async Task CreateState(Guid agentId)
     {
         TripState = new()
         {
@@ -34,7 +35,14 @@ public class TripStateMachine
         
         _currentState = StateFactory.CreateStateInstance(StateType.Create);
 
-        await HandleProcess(TripState.TripId.ToString(), true, true);
+        var stateCreationData = new StateCreationModel
+        {
+            TripId = TripState.TripId,
+            AssignedByPersonId = agentId
+        };
+        
+        
+        await HandleProcess(stateCreationData, true, true);
     }
     
     /// <summary>

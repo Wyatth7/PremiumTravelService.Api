@@ -98,8 +98,24 @@
       "ThankYouNote": "This is a thank you note"
     },
     {
-      "AssignedByPersonId":  "8a3cb3be-e55f-4468-a48e-8940b10741df",
+      "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
       "TripId": "c2f6e40d-46d7-4c05-b465-5de58ea645e2",
+      "Travellers": null,
+      "Packages": null,
+      "Payment": null,
+      "ThankYouNote": null
+    },
+    {
+      "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+      "TripId": "7ceb1fdc-9314-489e-9f80-3d8a1bf72f8a",
+      "Travellers": null,
+      "Packages": null,
+      "Payment": null,
+      "ThankYouNote": null
+    },
+    {
+      "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+      "TripId": "e1028ef8-56fa-44f9-b041-719cd457290a",
       "Travellers": null,
       "Packages": null,
       "Payment": null,
@@ -114,6 +130,16 @@
     },
     {
       "TripId": "c2f6e40d-46d7-4c05-b465-5de58ea645e2",
+      "CurrentState": 1,
+      "IsComplete": false
+    },
+    {
+      "TripId": "7ceb1fdc-9314-489e-9f80-3d8a1bf72f8a",
+      "CurrentState": 1,
+      "IsComplete": false
+    },
+    {
+      "TripId": "e1028ef8-56fa-44f9-b041-719cd457290a",
       "CurrentState": 1,
       "IsComplete": false
     }

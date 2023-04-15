@@ -16,11 +16,11 @@ public interface IStateMachineService
     /// <summary>
     /// Move to next state
     /// </summary>
-    void NextState();
+    Task NextState();
 
     /// <summary>
     /// Creates a trip state
     /// </summary>
     /// <returns></returns>
-    Task CreateState();
+    Task CreateState(Guid agentId);
 }
