@@ -1,8 +1,8 @@
 {
   "Trips": [
     {
-      "TripId": "b6d8cd41-41b7-4383-8546-850ee6fea21c",
       "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+      "TripId": "b6d8cd41-41b7-4383-8546-850ee6fea21c",
       "Travellers": [
         {
           "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
@@ -84,23 +84,37 @@
             "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
             "PaymentType": 2,
             "Amount": 600,
+            "Card": null,
             "Check": {
               "CheckId": "fd8adcaf-a693-44dd-91cc-73c886bd1ea5",
               "RoutingNumber": "123456",
               "AccountNumber": "0000542",
               "CheckNumber": "233"
-            }
+            },
+            "Cash": null
           }
         ]
       },
-      "Itinerary": null,
       "ThankYouNote": "This is a thank you note"
+    },
+    {
+      "AssignedByPersonId":  "8a3cb3be-e55f-4468-a48e-8940b10741df",
+      "TripId": "c2f6e40d-46d7-4c05-b465-5de58ea645e2",
+      "Travellers": null,
+      "Packages": null,
+      "Payment": null,
+      "ThankYouNote": null
     }
   ],
   "StateMachines": [
     {
       "TripId": "b6d8cd41-41b7-4383-8546-850ee6fea21c",
       "CurrentState": 5,
+      "IsComplete": false
+    },
+    {
+      "TripId": "c2f6e40d-46d7-4c05-b465-5de58ea645e2",
+      "CurrentState": 1,
       "IsComplete": false
     }
   ],

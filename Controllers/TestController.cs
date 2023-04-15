@@ -67,8 +67,8 @@ public class TestController : BaseApiController
     public async Task<IActionResult> TestStateMachine()
     {
         //create
-        // var storageData = await _dataStorageService.Read();
-        // await _stateMachineService.CreateState();
+        var storageData = await _dataStorageService.Read();
+        await _stateMachineService.CreateState();
         
         // _stateMachineService.NextState();
 
@@ -130,9 +130,9 @@ public class TestController : BaseApiController
         // }
         
         // var storageData = await _dataStorageService.Read();
-        await _stateMachineService.ResumeState(Guid.Parse("b6d8cd41-41b7-4383-8546-850ee6fea21c"),
-            "This is a thank you note");
-
+        // await _stateMachineService.ResumeState(Guid.Parse("b6d8cd41-41b7-4383-8546-850ee6fea21c"),
+        //     "This is a thank you note");
+        //
         var data = await _dataStorageService.Read();
         return new OkObjectResult(data);
     }
