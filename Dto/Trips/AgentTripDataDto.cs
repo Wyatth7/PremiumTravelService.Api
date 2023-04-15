@@ -4,6 +4,6 @@ namespace PremiumTravelService.Api.Dto.Trips;
 
 public class AgentTripDataDto
 {
-    public Trip Trip { get; set; }
+    public Guid TripId { get; set; }
     public bool IsComplete { get; set; }
 }

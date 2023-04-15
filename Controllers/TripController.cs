@@ -21,28 +21,16 @@ public class TripController : BaseApiController
         var storageData = await _dataStorageService.Read();
 
         var trips = storageData.Trips
-            .Where(t => t.AssignedByPersonId == agentId)
-            .OrderBy(t => t.TripId);
+            .Select(t => new { t.TripId, t.AssignedByPersonId })
+            .Where(t => t.AssignedByPersonId == agentId);
 
         var state = storageData.StateMachines
-            .Where(sm => trips.Any(t => t.TripId == sm.TripId))
-            .OrderBy(sm => sm.TripId);
-
-        // var agentTripArray = new List<AgentTripDataDto>();
-        //
-        // foreach (var trip in trips)
-        // {
-        //     agentTripArray.Add(new AgentTripDataDto
-        //     {
-        //         Trip = trip,
-        //         IsComplete = state.First(s => s.TripId == trip.TripId).IsComplete
-        //     });
-        // }
+            .Where(sm => trips.Any(t => t.TripId == sm.TripId));
 
         var agentTripArray = trips.Select(trip => new AgentTripDataDto
         {
-            Trip = trip,
-            IsComplete = state.First(state => state.TripId == trip.TripId)
+            TripId = trip.TripId,
+            IsComplete = state.First(stateItem => stateItem.TripId == trip.TripId)
                 .IsComplete
         });
 
