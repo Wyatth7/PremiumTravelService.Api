@@ -36,4 +36,14 @@ public class TripController : BaseApiController
 
         return new OkObjectResult(agentTripArray);
     }
+
+    [HttpGet]
+    [Route("currentState/{tripId:Guid:required}")]
+    [Produces("application/json")]
+    public async Task<IActionResult> GetTripState([FromRoute] Guid tripId)
+    {
+        var tripState = await _dataStorageService.FetchTripState(tripId);
+
+        return new OkObjectResult(tripState);
+    }
 }

@@ -32,7 +32,7 @@ public class StateMachineService : IStateMachineService
         return await _tripStateMachine.NextState(tripId);
     }
 
-    public async Task<StateType> CreateState(Guid agentId)
+    public async Task<TripState> CreateState(Guid agentId)
     {
         // if there is a current state, null it and set a new one
         var state = await _tripStateMachine.CreateState(agentId);

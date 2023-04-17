@@ -24,7 +24,7 @@ public class TripStateMachine
     /// <summary>
     /// Creates the start of a trip state
     /// </summary>
-    public async Task<StateType> CreateState(Guid agentId)
+    public async Task<TripState> CreateState(Guid agentId)
     {
         TripState = new()
         {
@@ -44,7 +44,7 @@ public class TripStateMachine
         
         await HandleProcess(stateCreationData, true, true);
 
-        return TripState.CurrentState;
+        return TripState;
     }
     
     /// <summary>

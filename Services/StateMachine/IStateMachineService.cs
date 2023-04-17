@@ -24,5 +24,5 @@ public interface IStateMachineService
     /// Creates a trip state
     /// </summary>
     /// <returns></returns>
-    Task<StateType> CreateState(Guid agentId);
+    Task<TripState> CreateState(Guid agentId);
 }
