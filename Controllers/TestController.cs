@@ -43,6 +43,16 @@ public class TestController : BaseApiController
     }
     
     [HttpGet]
+    [Route("read")]
+    [Produces("application/json")]
+    public async Task<IActionResult> TestJsonRead()
+    {
+        var readData = await _dataStorageService.Read();
+        
+        return new OkObjectResult(readData);
+    }
+    
+    [HttpGet]
     [Produces("application/json")]
     public async Task<IActionResult> TestSingletons()
     {

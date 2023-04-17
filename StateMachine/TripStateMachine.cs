@@ -24,7 +24,7 @@ public class TripStateMachine
     /// <summary>
     /// Creates the start of a trip state
     /// </summary>
-    public async Task CreateState(Guid agentId)
+    public async Task<StateType> CreateState(Guid agentId)
     {
         TripState = new()
         {
@@ -43,6 +43,8 @@ public class TripStateMachine
         
         
         await HandleProcess(stateCreationData, true, true);
+
+        return TripState.CurrentState;
     }
     
     /// <summary>
@@ -66,7 +68,7 @@ public class TripStateMachine
             throw new NullReferenceException("The trip requested does not exist.");
 
         // load current state
-        if (stateMachine.IsComplete) return new();
+        if (stateMachine.IsComplete) return null;
 
         TripState = stateMachine;
         _currentState = StateFactory.CreateStateInstance(TripState.CurrentState);
@@ -79,19 +81,31 @@ public class TripStateMachine
     /// <summary>
     /// Goes to next state
     /// </summary>
-    public async Task NextState()
+    public async Task<TripState> NextState(string tripId = null)
     {
+        if (tripId is not null)
+        {
+            var stateMachine = await _dataStorageService.FetchTripState(Guid.Parse(tripId));
+            
+            if (stateMachine.IsComplete) return null;
+
+            TripState = stateMachine;
+        }
+        
+        
         // if completed, return
         if (TripState.CurrentState == StateType.Itinerary)
         {
             TripState.IsComplete = true;
-            return;
+            return null;
         };
         
         // move to next state
         TripState.CurrentState = (StateType) ((int) TripState.CurrentState + 1);
 
         await SaveStateMachineStatus();
+
+        return TripState;
     }
     
     /// <summary>

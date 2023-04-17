@@ -136,6 +136,54 @@
       "Packages": null,
       "Payment": null,
       "ThankYouNote": null
+    },
+    {
+      "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+      "TripId": "4a282399-7582-431a-b8f1-74407f439291",
+      "Travellers": [
+        {
+          "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+          "FirstName": "Wyatt",
+          "LastName": "Hardin",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Wyatt Hardin"
+        }
+      ],
+      "Packages": null,
+      "Payment": null,
+      "ThankYouNote": null
+    },
+    {
+      "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+      "TripId": "e3641294-25e9-43b1-822c-e275e94f33a1",
+      "Travellers": [
+        {
+          "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+          "FirstName": "Wyatt",
+          "LastName": "Hardin",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Wyatt Hardin"
+        },
+        {
+          "PersonId": "ef010aab-85ff-42bc-bae0-d3cd7651da0b",
+          "FirstName": "adam",
+          "LastName": "ismon",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "adam ismon"
+        }
+      ],
+      "Packages": null,
+      "Payment": null,
+      "ThankYouNote": null
     }
   ],
   "StateMachines": [
@@ -146,11 +194,6 @@
     },
     {
       "TripId": "c2f6e40d-46d7-4c05-b465-5de58ea645e2",
-      "CurrentState": 1,
-      "IsComplete": false
-    },
-    {
-      "TripId": "7ceb1fdc-9314-489e-9f80-3d8a1bf72f8a",
       "CurrentState": 1,
       "IsComplete": false
     },
@@ -168,6 +211,21 @@
       "TripId": "ef010aab-85ff-42bc-bae0-d3cd7651da0b",
       "CurrentState": 1,
       "IsComplete": false
+    },
+    {
+      "TripId": "4a282399-7582-431a-b8f1-74407f439291",
+      "CurrentState": 2,
+      "IsComplete": false
+    },
+    {
+      "TripId": "7ceb1fdc-9314-489e-9f80-3d8a1bf72f8a",
+      "CurrentState": 4,
+      "IsComplete": false
+    },
+    {
+      "TripId": "e3641294-25e9-43b1-822c-e275e94f33a1",
+      "CurrentState": 2,
+      "IsComplete": false
     }
   ],
   "Travellers": [
@@ -180,6 +238,16 @@
       "IsEmployee": false,
       "CardDetails": null,
       "NameFull": "Wyatt Hardin"
+    },
+    {
+      "PersonId": "ef010aab-85ff-42bc-bae0-d3cd7651da0b",
+      "FirstName": "adam",
+      "LastName": "ismon",
+      "Email": "whardin1010@gmail.com",
+      "Phone": "4236642960",
+      "IsEmployee": false,
+      "CardDetails": null,
+      "NameFull": "adam ismon"
     }
   ],
   "Agents": [

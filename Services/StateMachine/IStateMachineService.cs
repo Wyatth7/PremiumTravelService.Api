@@ -1,5 +1,7 @@
 ﻿using PremiumTravelService.Api.Persistence.Entities.Itinerary;
+using PremiumTravelService.Api.Persistence.Entities.StateMachine;
 using PremiumTravelService.Api.Persistence.Entities.Trip;
+using PremiumTravelService.Api.StateMachine;
 
 namespace PremiumTravelService.Api.Services.StateMachine;
 
@@ -16,11 +18,11 @@ public interface IStateMachineService
     /// <summary>
     /// Move to next state
     /// </summary>
-    Task NextState();
+    Task<TripState> NextState(string tripId);
 
     /// <summary>
     /// Creates a trip state
     /// </summary>
     /// <returns></returns>
-    Task CreateState(Guid agentId);
+    Task<StateType> CreateState(Guid agentId);
 }

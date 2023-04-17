@@ -10,7 +10,7 @@ public class TravellerState : IState
         
         var travellers = trip.Travellers.ToList();
         
-        travellers.Add((Person)payload);
+        travellers.AddRange((IEnumerable<Person>)payload);
 
         trip.Travellers = travellers.ToArray();
 
