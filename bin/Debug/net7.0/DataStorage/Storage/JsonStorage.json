@@ -99,26 +99,7 @@
     },
     {
       "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-      "TripId": "d93648b8-1568-4bbd-b8bc-d58bc64b4c86",
-      "Travellers": [
-        {
-          "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        }
-      ],
-      "Packages": null,
-      "Payment": null,
-      "ThankYouNote": null
-    },
-    {
-      "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-      "TripId": "f6413690-9fd2-4ea5-9b03-8d8aa81a8671",
+      "TripId": "46c71a93-363e-400e-8200-b30331bbcec6",
       "Travellers": null,
       "Packages": null,
       "Payment": null,
@@ -126,7 +107,7 @@
     },
     {
       "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-      "TripId": "3d27b5be-b965-4e0b-8b17-c5801ee5d98e",
+      "TripId": "4ae34ea9-80dd-42d5-83ce-e5f455a926cc",
       "Travellers": null,
       "Packages": null,
       "Payment": null,
@@ -134,62 +115,8 @@
     },
     {
       "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-      "TripId": "39e6c9d8-1820-4d8d-8357-82a367019c6d",
-      "Travellers": [
-        {
-          "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        }
-      ],
-      "Packages": null,
-      "Payment": null,
-      "ThankYouNote": null
-    },
-    {
-      "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-      "TripId": "45e98285-6b95-44ad-bda1-15167faea462",
+      "TripId": "172ce7db-5cc7-4329-a935-9f409c275402",
       "Travellers": null,
-      "Packages": null,
-      "Payment": null,
-      "ThankYouNote": null
-    },
-    {
-      "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-      "TripId": "49c2e58d-37fd-4ade-bda3-dd03a3b0aa2d",
-      "Travellers": null,
-      "Packages": null,
-      "Payment": null,
-      "ThankYouNote": null
-    },
-    {
-      "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-      "TripId": "edb1692f-8688-417b-8c4c-e327cf4c9e3e",
-      "Travellers": null,
-      "Packages": null,
-      "Payment": null,
-      "ThankYouNote": null
-    },
-    {
-      "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-      "TripId": "2c40d08a-c09e-4d86-8559-fd8ba4494367",
-      "Travellers": [
-        {
-          "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        }
-      ],
       "Packages": null,
       "Payment": null,
       "ThankYouNote": null
@@ -202,42 +129,17 @@
       "IsComplete": false
     },
     {
-      "TripId": "d93648b8-1568-4bbd-b8bc-d58bc64b4c86",
-      "CurrentState": 1,
-      "IsComplete": false
-    },
-    {
-      "TripId": "f6413690-9fd2-4ea5-9b03-8d8aa81a8671",
+      "TripId": "46c71a93-363e-400e-8200-b30331bbcec6",
       "CurrentState": 2,
       "IsComplete": false
     },
     {
-      "TripId": "3d27b5be-b965-4e0b-8b17-c5801ee5d98e",
+      "TripId": "4ae34ea9-80dd-42d5-83ce-e5f455a926cc",
       "CurrentState": 2,
       "IsComplete": false
     },
     {
-      "TripId": "39e6c9d8-1820-4d8d-8357-82a367019c6d",
-      "CurrentState": 2,
-      "IsComplete": false
-    },
-    {
-      "TripId": "45e98285-6b95-44ad-bda1-15167faea462",
-      "CurrentState": 2,
-      "IsComplete": false
-    },
-    {
-      "TripId": "49c2e58d-37fd-4ade-bda3-dd03a3b0aa2d",
-      "CurrentState": 2,
-      "IsComplete": false
-    },
-    {
-      "TripId": "edb1692f-8688-417b-8c4c-e327cf4c9e3e",
-      "CurrentState": 2,
-      "IsComplete": false
-    },
-    {
-      "TripId": "2c40d08a-c09e-4d86-8559-fd8ba4494367",
+      "TripId": "172ce7db-5cc7-4329-a935-9f409c275402",
       "CurrentState": 2,
       "IsComplete": false
     }
