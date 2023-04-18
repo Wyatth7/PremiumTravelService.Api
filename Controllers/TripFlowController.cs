@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PremiumTravelService.Api.Dto;
 using PremiumTravelService.Api.Models.State;
 using PremiumTravelService.Api.Services.DataStorage;
 using PremiumTravelService.Api.Services.Singleton;
@@ -71,6 +72,24 @@ public class TripFlowController : BaseApiController
         await _stateMachineService.ResumeState(multiSelectResumeModel.TripId, packages);
         
         var tripState = (await _dataStorageService.FetchTripState(multiSelectResumeModel.TripId));
+
+        return new OkObjectResult(tripState);
+    }
+
+    [HttpPost]
+    [Route("resume/payment/assignPerson")]
+    [Produces("application/json")]
+    public async Task<IActionResult> AssignPaymentPerson([FromBody] AddPaymentPersonDto addPaymentPersonDto)
+    {
+        var person = await _singletonService
+            .GetTravellerSingleton()
+            .GetData();
+
+        var assignToPerson = person.FirstOrDefault(p => p.PersonId == addPaymentPersonDto.AssignToPersonId);
+
+        await _stateMachineService.ResumeState(addPaymentPersonDto.TripId, assignToPerson);
+
+        var tripState = await _stateMachineService.NextState(addPaymentPersonDto.TripId.ToString());
 
         return new OkObjectResult(tripState);
     }

@@ -286,6 +286,50 @@
         "Transactions": null
       },
       "ThankYouNote": null
+    },
+    {
+      "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+      "TripId": "ebae38fa-1be9-4050-b234-2c4b97d5150e",
+      "Travellers": [
+        {
+          "PersonId": "ef010aab-85ff-42bc-bae0-d3cd7651da0b",
+          "FirstName": "adam",
+          "LastName": "ismon",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "adam ismon"
+        }
+      ],
+      "Packages": [
+        {
+          "TripDetailId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+          "TripStart": "2023-04-06T04:56:19.81+00:00",
+          "TripEnd": "2023-04-06T04:56:19.81+00:00",
+          "Description": "This is a test description.",
+          "ShortDescription": "Greece to Chattanooga",
+          "Total": 599.99
+        }
+      ],
+      "Payment": {
+        "PaymentId": "57ab7519-fd9d-4a2c-9778-f7bf6dccfd8d",
+        "AssignedToPerson": {
+          "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+          "FirstName": "Wyatt",
+          "LastName": "Hardin",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Wyatt Hardin"
+        },
+        "Total": 599.99,
+        "IsPaidInFull": false,
+        "BillingDetails": null,
+        "Transactions": null
+      },
+      "ThankYouNote": null
     }
   ],
   "StateMachines": [
@@ -317,6 +361,11 @@
     {
       "TripId": "7206df0e-04af-4576-b435-3f22f2b72f53",
       "CurrentState": 3,
+      "IsComplete": false
+    },
+    {
+      "TripId": "ebae38fa-1be9-4050-b234-2c4b97d5150e",
+      "CurrentState": 4,
       "IsComplete": false
     }
   ],
