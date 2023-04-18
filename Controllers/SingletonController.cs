@@ -3,7 +3,8 @@ using PremiumTravelService.Api.Singleton;
 
 namespace PremiumTravelService.Api.Controllers;
 
-public class PersonController : BaseApiController
+[Route("api/singleton")]
+public class SingletonController : BaseApiController
 {
     [HttpGet]
     [Route("agents")]
@@ -23,5 +24,15 @@ public class PersonController : BaseApiController
         var travellers = await TravellerSingleton.GetInstance().GetData();
 
         return new OkObjectResult(travellers);
+    }
+
+    [HttpGet]
+    [Route("packages")]
+    [Produces("application/json")]
+    public async Task<IActionResult> GetPackages()
+    {
+        var packages = await PackageSingleton.GetInstance().GetData();
+
+        return new OkObjectResult(packages);
     }
 }

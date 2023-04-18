@@ -11,7 +11,7 @@ public class PackagesState : IState
 
         var packages = trip.Packages.ToList();
         
-        packages.Add((Package)payload);
+        packages.AddRange((Package[])payload);
 
         trip.Packages = packages.ToArray();
 

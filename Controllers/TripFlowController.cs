@@ -55,6 +55,26 @@ public class TripFlowController : BaseApiController
         return new OkObjectResult(itinerary);
     }
 
+    [HttpPost]
+    [Route("resume/packages")]
+    [Consumes("application/json")]
+    [Produces("application/json")]
+    public async Task<IActionResult> ResumePackageTrip([FromBody] MultiSelectResumeModel multiSelectResumeModel)
+    {
+        var packageSingleton = await _singletonService.GetPackageSingleton().GetData();
+
+        var packages = packageSingleton.Where(p =>
+            multiSelectResumeModel.Payload.Any(detailId => detailId == p.TripDetailId))
+            .OrderBy(p => p.TripStart)
+            .ToArray();
+
+        await _stateMachineService.ResumeState(multiSelectResumeModel.TripId, packages);
+        
+        var tripState = (await _dataStorageService.FetchTripState(multiSelectResumeModel.TripId));
+
+        return new OkObjectResult(tripState);
+    }
+
     [HttpGet]
     [Route("state/{tripId:Guid:required}")]
     [Produces("application/json")]
