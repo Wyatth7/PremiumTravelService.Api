@@ -166,6 +166,33 @@
       "Packages": null,
       "Payment": null,
       "ThankYouNote": null
+    },
+    {
+      "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+      "TripId": "edb1692f-8688-417b-8c4c-e327cf4c9e3e",
+      "Travellers": null,
+      "Packages": null,
+      "Payment": null,
+      "ThankYouNote": null
+    },
+    {
+      "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+      "TripId": "2c40d08a-c09e-4d86-8559-fd8ba4494367",
+      "Travellers": [
+        {
+          "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+          "FirstName": "Wyatt",
+          "LastName": "Hardin",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Wyatt Hardin"
+        }
+      ],
+      "Packages": null,
+      "Payment": null,
+      "ThankYouNote": null
     }
   ],
   "StateMachines": [
@@ -201,6 +228,16 @@
     },
     {
       "TripId": "49c2e58d-37fd-4ade-bda3-dd03a3b0aa2d",
+      "CurrentState": 2,
+      "IsComplete": false
+    },
+    {
+      "TripId": "edb1692f-8688-417b-8c4c-e327cf4c9e3e",
+      "CurrentState": 2,
+      "IsComplete": false
+    },
+    {
+      "TripId": "2c40d08a-c09e-4d86-8559-fd8ba4494367",
       "CurrentState": 2,
       "IsComplete": false
     }
