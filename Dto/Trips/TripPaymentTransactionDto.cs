@@ -7,6 +7,8 @@ namespace PremiumTravelService.Api.Dto.Trips;
 
 public class TripPaymentTransactionDto
 {
+    public Guid TripId { get; set; }
+    public Guid PersonId { get; set; }
     public decimal Amount { get; set; }
     public PaymentType PaymentType { get; set; }
     public Card Card { get; set; }

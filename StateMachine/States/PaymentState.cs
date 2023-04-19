@@ -19,11 +19,20 @@ public class PaymentState : IState
         {
             case PaymentType.Card:
                 transaction.Card = transactionData.Card;
+                transaction.Card.CardId = Guid.NewGuid();
+                transaction.Card.Address.AddressId = Guid.NewGuid();
+                transactionData.Check = null;
+                transactionData.Cash = null;
                 break;
             case PaymentType.Check:
                 transaction.Check = transactionData.Check;
+                transaction.Check.CheckId = Guid.NewGuid();
+                transaction.Card = null;
+                transaction.Cash = null;
                 break;
             case PaymentType.Cash:
+                transaction.Card = null;
+                transaction.Check = null;
                 break;
             default:
                 throw new InvalidEnumArgumentException("The enum value provided is not valid " +

@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PremiumTravelService.Api.Dto;
 using PremiumTravelService.Api.Dto.Trips;
+using PremiumTravelService.Api.Models.Payment;
 using PremiumTravelService.Api.Models.State;
+using PremiumTravelService.Api.Persistence.Entities.StateMachine;
 using PremiumTravelService.Api.Services.DataStorage;
 using PremiumTravelService.Api.Services.Singleton;
 using PremiumTravelService.Api.Services.StateMachine;
@@ -101,7 +103,49 @@ public class TripFlowController : BaseApiController
     [Produces("application/json")]
     public async Task<IActionResult> AddTransaction([FromBody] TripPaymentTransactionDto tripPaymentTransactionDto)
     {
-        return Ok();
+        var transactionModel = new TransactionModel
+        {
+            PersonId = tripPaymentTransactionDto.PersonId,
+            PaymentType = tripPaymentTransactionDto.PaymentType,
+            Total = tripPaymentTransactionDto.Amount,
+            Card = tripPaymentTransactionDto.Card,
+            Cash = tripPaymentTransactionDto.Cash,
+            Check = tripPaymentTransactionDto.Check
+        };
+
+        await _stateMachineService.ResumeState(tripPaymentTransactionDto.TripId, transactionModel);
+
+        var totalRemaining = await _dataStorageService.FetchRemainingTripBalance(tripPaymentTransactionDto.TripId);
+
+        // if remaining balance is less than or equal
+        // to 0, go to next state
+        // else, get current state
+        var state = totalRemaining <= 0
+            ? await _stateMachineService.NextState(tripPaymentTransactionDto.TripId.ToString())
+            : await _dataStorageService.FetchTripState(tripPaymentTransactionDto.TripId);
+        
+        return totalRemaining > 0 ? 
+                new OkObjectResult(new AddTransactionReturnDto
+                {
+                    RemainingTripBalance = totalRemaining,
+                    TripId = state.TripId,
+                    IsComplete = state.IsComplete,
+                    CurrentState = state.CurrentState
+                })
+            : new OkObjectResult(state);
+    }
+
+    [HttpPost]
+    [Route("resume/thankYouNote")]
+    [Consumes("application/json")]
+    [Produces("application/json")]
+    public async Task<IActionResult> AddThankYouNote([FromBody] AddThankYouNoteDto addThankYouNoteDto)
+    {
+        await _stateMachineService.ResumeState(addThankYouNoteDto.TripId, addThankYouNoteDto.ThankYouNote);
+
+        await _stateMachineService.NextState(addThankYouNoteDto.TripId.ToString());
+
+        return new OkResult();
     }
 
     [HttpGet]

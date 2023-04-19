@@ -325,9 +325,188 @@
           "NameFull": "Wyatt Hardin"
         },
         "Total": 599.99,
-        "IsPaidInFull": false,
+        "IsPaidInFull": true,
         "BillingDetails": null,
-        "Transactions": null
+        "Transactions": [
+          {
+            "TransactionId": "85eb1662-5d10-4cea-872e-80f91f1b1127",
+            "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+            "PaymentType": 3,
+            "Amount": 599,
+            "Card": {
+              "CardId": "00000000-0000-0000-0000-000000000000",
+              "CardNumber": null,
+              "ExpirationDate": "0001-01-01T00:00:00+00:00",
+              "SecurityCode": null,
+              "NameOnCard": null,
+              "Address": null
+            },
+            "Check": null,
+            "Cash": null
+          },
+          {
+            "TransactionId": "cd3aedac-e578-498b-a90e-eaae6def3602",
+            "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+            "PaymentType": 3,
+            "Amount": 0.1,
+            "Card": {
+              "CardId": "00000000-0000-0000-0000-000000000000",
+              "CardNumber": null,
+              "ExpirationDate": "0001-01-01T00:00:00+00:00",
+              "SecurityCode": null,
+              "NameOnCard": null,
+              "Address": null
+            },
+            "Check": null,
+            "Cash": null
+          },
+          {
+            "TransactionId": "77c33b29-ea8b-493f-9268-680cce66f3cf",
+            "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+            "PaymentType": 3,
+            "Amount": 0.89,
+            "Card": {
+              "CardId": "00000000-0000-0000-0000-000000000000",
+              "CardNumber": null,
+              "ExpirationDate": "0001-01-01T00:00:00+00:00",
+              "SecurityCode": null,
+              "NameOnCard": null,
+              "Address": null
+            },
+            "Check": null,
+            "Cash": null
+          }
+        ]
+      },
+      "ThankYouNote": null
+    },
+    {
+      "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+      "TripId": "71a64809-cf8b-4835-b412-01fadde1b145",
+      "Travellers": [
+        {
+          "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+          "FirstName": "Wyatt",
+          "LastName": "Hardin",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Wyatt Hardin"
+        }
+      ],
+      "Packages": [
+        {
+          "TripDetailId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+          "TripStart": "2023-04-06T04:56:19.81+00:00",
+          "TripEnd": "2023-04-06T04:56:19.81+00:00",
+          "Description": "This is a test description.",
+          "ShortDescription": "Greece to Chattanooga",
+          "Total": 599.99
+        }
+      ],
+      "Payment": {
+        "PaymentId": "9573d4dc-f4a7-4632-800a-4ea9388bc5eb",
+        "AssignedToPerson": {
+          "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+          "FirstName": "Wyatt",
+          "LastName": "Hardin",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Wyatt Hardin"
+        },
+        "Total": 599.99,
+        "IsPaidInFull": true,
+        "BillingDetails": null,
+        "Transactions": [
+          {
+            "TransactionId": "76489e55-a9c6-4452-8cdb-5ac55447c20c",
+            "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+            "PaymentType": 1,
+            "Amount": 599,
+            "Card": null,
+            "Check": null,
+            "Cash": null
+          },
+          {
+            "TransactionId": "cb868146-3c3d-473f-b4d2-797dc23f8dcc",
+            "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+            "PaymentType": 1,
+            "Amount": 0.01,
+            "Card": null,
+            "Check": null,
+            "Cash": null
+          },
+          {
+            "TransactionId": "e2270a81-913c-436d-a4ab-652ab00b305e",
+            "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+            "PaymentType": 1,
+            "Amount": 0.01,
+            "Card": {
+              "CardId": "00000000-0000-0000-0000-000000000000",
+              "CardNumber": "1111",
+              "ExpirationDate": "2023-04-29T00:00:00-04:00",
+              "SecurityCode": "123",
+              "NameOnCard": "test",
+              "Address": {
+                "AddressId": "00000000-0000-0000-0000-000000000000",
+                "Street": "123 test street ",
+                "City": "rock spring",
+                "State": "ga",
+                "ZipCode": null
+              }
+            },
+            "Check": null,
+            "Cash": null
+          },
+          {
+            "TransactionId": "abaf6e71-018b-49f1-a098-06479393ae99",
+            "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+            "PaymentType": 1,
+            "Amount": 0.01,
+            "Card": {
+              "CardId": "fe595a2f-a5b5-4cbc-a965-36e7c9e60ed9",
+              "CardNumber": "1111",
+              "ExpirationDate": "2023-04-29T00:00:00-04:00",
+              "SecurityCode": "123",
+              "NameOnCard": "test",
+              "Address": {
+                "AddressId": "b0fa19a0-e97d-4587-85a1-56c30fef63aa",
+                "Street": "123 test street ",
+                "City": "rock spring",
+                "State": "ga",
+                "ZipCode": null
+              }
+            },
+            "Check": null,
+            "Cash": null
+          },
+          {
+            "TransactionId": "52c03b3e-13d5-440d-b86a-361aaa8facb1",
+            "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+            "PaymentType": 2,
+            "Amount": 0.01,
+            "Card": null,
+            "Check": {
+              "CheckId": "82083d7d-f141-40d8-976d-239d7a4e75c4",
+              "RoutingNumber": "123456",
+              "AccountNumber": "0000126",
+              "CheckNumber": "222x90"
+            },
+            "Cash": null
+          },
+          {
+            "TransactionId": "bb73876f-244b-4733-a5a0-95c95ad20c21",
+            "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+            "PaymentType": 3,
+            "Amount": 0.95,
+            "Card": null,
+            "Check": null,
+            "Cash": null
+          }
+        ]
       },
       "ThankYouNote": null
     }
@@ -365,7 +544,12 @@
     },
     {
       "TripId": "ebae38fa-1be9-4050-b234-2c4b97d5150e",
-      "CurrentState": 4,
+      "CurrentState": 5,
+      "IsComplete": false
+    },
+    {
+      "TripId": "71a64809-cf8b-4835-b412-01fadde1b145",
+      "CurrentState": 5,
       "IsComplete": false
     }
   ],

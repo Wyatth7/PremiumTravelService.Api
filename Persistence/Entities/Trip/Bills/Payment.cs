@@ -10,7 +10,7 @@ public class Payment
     public decimal Total { get; set; }
     
     [JsonIgnore]
-    public decimal RemainingBalance => Transactions is null ? Total : Transactions.Sum(t => t.Amount);
+    public decimal RemainingBalance => Transactions is null ? Total : Total - Transactions.Sum(t => t.Amount);
     public bool IsPaidInFull { get; set; }
     public BillDetail[] BillingDetails { get; set; }
     public Transaction[] Transactions { get; set; }
