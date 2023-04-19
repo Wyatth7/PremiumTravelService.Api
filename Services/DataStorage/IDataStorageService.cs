@@ -34,4 +34,6 @@ public interface IDataStorageService
     /// <param name="tripId">Id of trip state to fetch</param>
     /// <returns>trip state or null</returns>
     Task<TripState> FetchTripState(Guid tripId);
+
+    Task<decimal> FetchRemainingTripBalance(Guid tripId);
 }

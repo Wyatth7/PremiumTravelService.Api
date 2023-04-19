@@ -49,4 +49,15 @@ public class DataStorageService : IDataStorageService
         return storageData.StateMachines
             .FirstOrDefault(sm => sm.TripId == tripId);
     }
+
+    public async Task<decimal> FetchRemainingTripBalance(Guid tripId)
+    {
+        var storageData = await Read();
+
+        var remainingBalance = storageData.Trips
+            .First(t => t.TripId == tripId);
+        
+        
+       return remainingBalance.Payment.RemainingBalance;
+    }
 }

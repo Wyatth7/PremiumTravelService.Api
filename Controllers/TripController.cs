@@ -38,6 +38,16 @@ public class TripController : BaseApiController
     }
 
     [HttpGet]
+    [Route("payment/{tripId:Guid:required}")]
+    [Produces("application/json")]
+    public async Task<IActionResult> GetRemainingTripBalance([FromRoute] Guid tripId)
+    {
+        var remainingBalance = await _dataStorageService.FetchRemainingTripBalance(tripId);
+
+        return new OkObjectResult(remainingBalance);
+    }
+
+    [HttpGet]
     [Route("currentState/{tripId:Guid:required}")]
     [Produces("application/json")]
     public async Task<IActionResult> GetTripState([FromRoute] Guid tripId)
