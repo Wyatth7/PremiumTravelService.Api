@@ -508,7 +508,7 @@
           }
         ]
       },
-      "ThankYouNote": null
+      "ThankYouNote": "wow this is the final trip building sequence"
     }
   ],
   "StateMachines": [
@@ -549,8 +549,8 @@
     },
     {
       "TripId": "71a64809-cf8b-4835-b412-01fadde1b145",
-      "CurrentState": 5,
-      "IsComplete": false
+      "CurrentState": 6,
+      "IsComplete": true
     }
   ],
   "Travellers": [

@@ -148,6 +148,16 @@ public class TripFlowController : BaseApiController
         return new OkResult();
     }
 
+    [HttpPost]
+    [Route("resume/itinerary/{tripId:Guid:required}")]
+    [Produces("application/json")]
+    public async Task<IActionResult> CreateItinerary([FromRoute] Guid tripId)
+    {
+        var itinerary = await _stateMachineService.ResumeState(tripId, null);
+
+        return new OkObjectResult(itinerary);
+    }
+
     [HttpGet]
     [Route("state/{tripId:Guid:required}")]
     [Produces("application/json")]

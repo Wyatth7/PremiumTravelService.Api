@@ -1,4 +1,6 @@
-﻿using PremiumTravelService.Api.Models.State;
+﻿using PremiumTravelService.Api.Decorator;
+using PremiumTravelService.Api.Decorator.Decorators;
+using PremiumTravelService.Api.Models.State;
 using PremiumTravelService.Api.Persistence.Entities.Itinerary;
 using PremiumTravelService.Api.Persistence.Entities.StateMachine;
 using PremiumTravelService.Api.Persistence.Entities.Trip;
@@ -68,7 +70,7 @@ public class TripStateMachine
             throw new NullReferenceException("The trip requested does not exist.");
 
         // load current state
-        if (stateMachine.IsComplete) return null;
+        if (stateMachine.IsComplete) return await CreateItinerary(trip);
 
         TripState = stateMachine;
         _currentState = StateFactory.CreateStateInstance(TripState.CurrentState);
@@ -102,6 +104,11 @@ public class TripStateMachine
         
         // move to next state
         TripState.CurrentState = (StateType) ((int) TripState.CurrentState + 1);
+
+        if (TripState.CurrentState == StateType.Itinerary)
+        {
+            TripState.IsComplete = true;
+        }
 
         await SaveStateMachineStatus();
 
@@ -177,4 +184,15 @@ public class TripStateMachine
 
         await _dataStorageService.Write(storageData);
     }
+
+    private async Task<Itinerary> CreateItinerary(Trip trip)
+    {
+        var simple = new ConcreteItinerary();
+        var travellers = new TravellerDecorator(simple);
+        var details = new TripDetailsDecorator(travellers);
+        var billing = new BillingDecorator(details);
+        var booking = new BookingDecorator(billing);
+
+        return await booking.PopulateItinerary(trip,new Itinerary());
+    } 
 }

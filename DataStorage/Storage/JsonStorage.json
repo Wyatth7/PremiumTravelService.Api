@@ -550,7 +550,7 @@
     {
       "TripId": "71a64809-cf8b-4835-b412-01fadde1b145",
       "CurrentState": 6,
-      "IsComplete": false
+      "IsComplete": true
     }
   ],
   "Travellers": [
