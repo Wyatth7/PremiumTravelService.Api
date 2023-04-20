@@ -1,4 +1,7 @@
 using NUnit.Framework;
+using System;
+using PremiumTravelService.Api.Factory;
+using PremiumTravelService.Api.DataStorage.FileHandling;
 
 namespace PremiumTravelService.Api.NunitTests;
 
@@ -6,11 +9,31 @@ namespace PremiumTravelService.Api.NunitTests;
 public class FactoryTests
 {
     [Test]
-    public void StorageFactoryFileHandler_JSON()
+    public void StorageFactoryFileHandlerCreates_JSON()
     {
-        StorageFactory sf = new StorageFactory();
-        var fileHandler = sf.CreateFileHandler("json");
+        StorageFactory storageFactory = new StorageFactory();
+        var jsonFileHandler = storageFactory.CreateFileHandler("json");
 
-        Assert.Equal(fileHandler, new jsonFileHandler);
+        Assert.AreEqual(jsonFileHandler.GetType(), new JsonFileHandler().GetType());
+    }
+
+    [Test]
+    public void StorageFactoryFileHandlerCreates_XML()
+    {
+        StorageFactory storageFactory = new StorageFactory();
+        var xmlFileHandler = storageFactory.CreateFileHandler("xml");
+
+        Assert.AreEqual(xmlFileHandler.GetType(), new XmlFileHandler().GetType());
+    }
+
+    [Test]
+    public void StorageFactoryFileHandlerThrowsExceptionWhenInvalidArg()
+    {
+        StorageFactory storageFactory = new StorageFactory();
+
+        Assert.Throws<InvalidOperationException>(() =>
+        {
+            storageFactory.CreateFileHandler("invalid");
+        });
     }
 }
