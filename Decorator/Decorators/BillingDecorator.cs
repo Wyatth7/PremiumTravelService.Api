@@ -33,7 +33,7 @@ public class BillingDecorator : ItineraryDecorator
             var finalTransaction = new Transactions
             {
                 PaidByName = trip.Travellers
-                    .First(t => transaction.PersonId == t.PersonId).NameFull,
+                    .First(t => trip.Payment.AssignedToPerson.PersonId == t.PersonId).NameFull,
                 PaymentType = transaction.PaymentType,
                 Amount = transaction.Amount
             };

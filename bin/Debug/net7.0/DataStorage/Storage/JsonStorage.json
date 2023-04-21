@@ -1,114 +1,13 @@
 {
   "Trips": [
-    {
-      "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-      "TripId": "70c146d2-3e6f-4c99-9666-68bb0a2209e8",
-      "Travellers": [
-        {
-          "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        }
-      ],
-      "Packages": [
-        {
-          "TripDetailId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-          "TripStart": "2023-04-06T04:56:19.81+00:00",
-          "TripEnd": "2023-04-06T04:56:19.81+00:00",
-          "Description": "This is a test description.",
-          "ShortDescription": "Greece to Chattanooga",
-          "Total": 599.99
-        }
-      ],
-      "Payment": {
-        "PaymentId": "8953b2fe-abb0-4496-a83d-1bd3b5692a98",
-        "AssignedToPerson": {
-          "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        },
-        "Total": 599.99,
-        "IsPaidInFull": true,
-        "BillingDetails": null,
-        "Transactions": [
-          {
-            "TransactionId": "1b835af5-d320-42e8-9df1-6db60a23272b",
-            "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-            "PaymentType": 3,
-            "Amount": 600,
-            "Card": null,
-            "Check": null,
-            "Cash": null
-          }
-        ]
-      },
-      "ThankYouNote": "bbjbjbjbbjbjbjb"
-    },
-    {
-      "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-      "TripId": "617515dd-65cc-4124-aeac-50f4b6cb40ca",
-      "Travellers": null,
-      "Packages": null,
-      "Payment": null,
-      "ThankYouNote": null
-    },
-    {
-      "AssignedByPersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-      "TripId": "919eb502-1832-4f87-9e9f-e1f8e90afa28",
-      "Travellers": [
-        {
-          "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        }
-      ],
-      "Packages": [],
-      "Payment": {
-        "PaymentId": "4f72d41a-7ac4-477f-9f6c-a0cb47df1bd2",
-        "AssignedToPerson": null,
-        "Total": 0,
-        "IsPaidInFull": false,
-        "BillingDetails": null,
-        "Transactions": null
-      },
-      "ThankYouNote": null
-    }
+    
   ],
   "StateMachines": [
-    {
-      "TripId": "70c146d2-3e6f-4c99-9666-68bb0a2209e8",
-      "CurrentState": 6,
-      "IsComplete": true
-    },
-    {
-      "TripId": "617515dd-65cc-4124-aeac-50f4b6cb40ca",
-      "CurrentState": 1,
-      "IsComplete": false
-    },
-    {
-      "TripId": "919eb502-1832-4f87-9e9f-e1f8e90afa28",
-      "CurrentState": 2,
-      "IsComplete": false
-    }
+    
   ],
   "Travellers": [
     {
-      "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+      "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
       "FirstName": "Wyatt",
       "LastName": "Hardin",
       "Email": "whardin1010@gmail.com",
@@ -130,7 +29,7 @@
   ],
   "Agents": [
     {
-      "PersonId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+      "PersonId": "b859f1a1-ce9e-4032-b8f1-0c11c7f8d7be",
       "FirstName": "Maddy",
       "LastName": "Crowley",
       "Email": "test@test.com",
@@ -138,11 +37,21 @@
       "IsEmployee": true,
       "CardDetails": null,
       "NameFull": "Maddy Crowley"
+    },
+    {
+      "PersonId": "fc92cfe4-d9cc-4ce7-94dd-194237a38a26",
+      "FirstName": "Dylan",
+      "LastName": "Harnby",
+      "Email": "test@test.com",
+      "Phone": "4235557894",
+      "IsEmployee": true,
+      "CardDetails": null,
+      "NameFull": "Dylan Harnby"
     }
   ],
   "Packages": [
     {
-      "TripDetailId": "8a3cb3be-e55f-4468-a48e-8940b10741df",
+      "TripDetailId": "d2b668df-6106-4cd1-94ca-dff0f2f2ee22",
       "TripStart": "2023-04-06T04:56:19.81+00:00",
       "TripEnd": "2023-04-06T04:56:19.81+00:00",
       "Description": "This is a test description.",
@@ -150,7 +59,7 @@
       "Total": 599.99
     },
     {
-      "TripDetailId": "8a3cb3be-e55f-4468-a48e-8540b10741df",
+      "TripDetailId": "e27fbaa6-8fa2-4f4d-9da7-307781bb7115",
       "TripStart": "2023-04-06T04:56:19.81+00:00",
       "TripEnd": "2023-04-06T04:56:19.81+00:00",
       "Description": "This is a test description2.",

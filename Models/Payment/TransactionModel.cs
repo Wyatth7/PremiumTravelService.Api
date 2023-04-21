@@ -8,7 +8,6 @@ namespace PremiumTravelService.Api.Models.Payment;
 
 public class TransactionModel
 {
-    public Guid PersonId { get; set; }
     public PaymentType PaymentType { get; set; }
     public Card Card { get; set; }
     public Check Check { get; set; }

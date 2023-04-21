@@ -136,7 +136,6 @@ public class TripFlowController : BaseApiController
     {
         var transactionModel = new TransactionModel
         {
-            PersonId = tripPaymentTransactionDto.PersonId,
             PaymentType = tripPaymentTransactionDto.PaymentType,
             Total = tripPaymentTransactionDto.Amount,
             Card = tripPaymentTransactionDto.Card,

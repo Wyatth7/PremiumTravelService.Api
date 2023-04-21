@@ -12,7 +12,7 @@ public class PaymentState : IState
     {
         var transactionData = (TransactionModel) payload;
         
-        var transaction = new Transaction {PersonId = transactionData.PersonId, TransactionId = Guid.NewGuid()};
+        var transaction = new Transaction {TransactionId = Guid.NewGuid()};
 
         // find if cash, card, check
         switch (transactionData.PaymentType)
