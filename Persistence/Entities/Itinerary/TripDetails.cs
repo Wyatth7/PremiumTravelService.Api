@@ -2,7 +2,7 @@
 
 public class TripDetails
 {
-    public DateTimeOffset TripStart { get; set; }
-    public DateTimeOffset TripEnd { get; set; }
+    public DateTimeOffset StartDate { get; set; }
+    public DateTimeOffset EndDate { get; set; }
     public string Description { get; set; }
 }

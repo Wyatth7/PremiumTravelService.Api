@@ -25,8 +25,8 @@ public class TripDetailsDecorator : ItineraryDecorator
         {
             details.Add(new()
             {
-                TripStart = detail.TripStart,
-                TripEnd = detail.TripEnd,
+                StartDate = detail.TripStart,
+                EndDate = detail.TripEnd,
                 Description = detail.Description
             });
         }
