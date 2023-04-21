@@ -44,8 +44,24 @@ public class TripFlowController : BaseApiController
     public async Task<IActionResult> ResumeTravellersTrip([FromBody] MultiSelectResumeModel multiSelectResumeModel)
     {
         // remove all repeated ids
+        var currentTravellers = await _dataStorageService.GetTravellersForTrip(multiSelectResumeModel.TripId);
 
-        var travellerSingleton = await _singletonService.GetTravellerSingleton().GetData();
+        if (currentTravellers is not null)
+        {
+            multiSelectResumeModel.Payload =
+                multiSelectResumeModel.Payload
+                    .Where(p =>
+                        !currentTravellers
+                            .Select(t => t.PersonId)
+                            .Contains(p));
+        }
+
+        if (!multiSelectResumeModel.Payload.Any()) return new BadRequestResult();
+        
+        // assign new travellers
+        var travellerSingleton = await _singletonService
+            .GetTravellerSingleton()
+            .GetData();
 
         var travellers = travellerSingleton.Where(t =>
             multiSelectResumeModel.Payload.Any(tid => tid == t.PersonId));
@@ -65,6 +81,21 @@ public class TripFlowController : BaseApiController
     [Produces("application/json")]
     public async Task<IActionResult> ResumePackageTrip([FromBody] MultiSelectResumeModel multiSelectResumeModel)
     {
+        // remove all repeated packages
+        var currentPackages = await _dataStorageService.GetPackagesForTrip(multiSelectResumeModel.TripId);
+
+        if (currentPackages is not null)
+        {
+            multiSelectResumeModel.Payload =
+                multiSelectResumeModel.Payload
+                    .Where(p =>
+                        !currentPackages
+                            .Select(t => t.TripDetailId)
+                            .Contains(p));
+        }
+
+        if (!multiSelectResumeModel.Payload.Any()) return new BadRequestResult();
+        
         var packageSingleton = await _singletonService.GetPackageSingleton().GetData();
 
         var packages = packageSingleton.Where(p =>

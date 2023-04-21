@@ -60,4 +60,38 @@ public class DataStorageService : IDataStorageService
         
        return remainingBalance.Payment.RemainingBalance;
     }
+
+    public async Task<IEnumerable<Person>> GetTravellersForTrip(Guid tripId)
+    {
+        var storageData = await Read();
+
+        var travellers = storageData.Trips
+            .Select(t => new
+            {
+                t.TripId,
+                t.Travellers
+            })
+            .FirstOrDefault(t => t.TripId == tripId);
+
+        if (travellers is null || travellers.Travellers is null) return null;
+        
+        return travellers.Travellers.ToList();
+    }
+
+    public async Task<IEnumerable<Package>> GetPackagesForTrip(Guid tripId)
+    {
+        var storageData = await Read();
+
+        var trip = storageData.Trips
+            .Select(t => new
+            {
+                t.TripId,
+                t.Packages
+            })
+            .FirstOrDefault(t => t.TripId == tripId);
+
+        if (trip is null || trip.Packages is null) return null;
+
+        return trip.Packages.ToList();
+    }
 }
