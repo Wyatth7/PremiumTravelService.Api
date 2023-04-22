@@ -16,6 +16,11 @@ public class AgentController : BaseApiController
         _singletonService = singletonService;
     }
     
+    /// <summary>
+    /// Gets a list of trips that belong to an agent
+    /// </summary>
+    /// <param name="agentId">ID of agent</param>
+    /// <returns>list of trips</returns>
     [HttpGet]
     [Route("{agentId:required}")]
     [Produces("application/json")]
@@ -29,6 +34,11 @@ public class AgentController : BaseApiController
         return new OkObjectResult(trips);
     }
     
+    /// <summary>
+    /// Gets an agent
+    /// </summary>
+    /// <param name="agentId">ID of an agent</param>
+    /// <returns>Returns an agent</returns>
     [HttpGet]
     [Route("details/{agentId:Guid:required}")]
     [Produces("application/json")]

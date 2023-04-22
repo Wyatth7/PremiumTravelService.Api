@@ -13,6 +13,11 @@ public class TripController : BaseApiController
         _dataStorageService = dataStorageService;
     }
 
+    /// <summary>
+    /// Gets trips for an agent
+    /// </summary>
+    /// <param name="agentId">ID of agent</param>
+    /// <returns>list of trips belonging to an agent</returns>
     [HttpGet]
     [Route("agent/{agentId:Guid:required}")]
     [Produces("Application/json")]
@@ -37,22 +42,32 @@ public class TripController : BaseApiController
         return new OkObjectResult(agentTripArray);
     }
 
+    /// <summary>
+    /// Gets remaining balance of a trip
+    /// </summary>
+    /// <param name="tripId">ID of a trip</param>
+    /// <returns>trip balance</returns>
     [HttpGet]
     [Route("payment/{tripId:Guid:required}")]
     [Produces("application/json")]
     public async Task<IActionResult> GetRemainingTripBalance([FromRoute] Guid tripId)
     {
-        var remainingBalance = await _dataStorageService.FetchRemainingTripBalance(tripId);
+        var remainingBalance = await _dataStorageService.GetRemainingTripBalance(tripId);
 
         return new OkObjectResult(remainingBalance);
     }
 
+    /// <summary>
+    /// Gets the state of a trip
+    /// </summary>
+    /// <param name="tripId">ID of a trip</param>
+    /// <returns>state object for trip</returns>
     [HttpGet]
     [Route("currentState/{tripId:Guid:required}")]
     [Produces("application/json")]
     public async Task<IActionResult> GetTripState([FromRoute] Guid tripId)
     {
-        var tripState = await _dataStorageService.FetchTripState(tripId);
+        var tripState = await _dataStorageService.GetTripState(tripId);
 
         return new OkObjectResult(tripState);
     }

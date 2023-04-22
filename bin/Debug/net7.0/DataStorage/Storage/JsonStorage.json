@@ -1,9 +1,329 @@
 {
   "Trips": [
-    
+    {
+      "AssignedByPersonId": "b859f1a1-ce9e-4032-b8f1-0c11c7f8d7be",
+      "TripId": "034cfce0-2c0f-4e3c-970f-40ebb3fd1e13",
+      "Travellers": [
+        {
+          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
+          "FirstName": "Wyatt",
+          "LastName": "Hardin",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Wyatt Hardin"
+        }
+      ],
+      "Packages": [
+        {
+          "TripDetailId": "d2b668df-6106-4cd1-94ca-dff0f2f2ee22",
+          "TripStart": "2023-04-06T04:56:19.81+00:00",
+          "TripEnd": "2023-04-06T04:56:19.81+00:00",
+          "Description": "This is a test description.",
+          "ShortDescription": "Greece to Chattanooga",
+          "Total": 599.99
+        },
+        {
+          "TripDetailId": "e27fbaa6-8fa2-4f4d-9da7-307781bb7115",
+          "TripStart": "2023-04-06T04:56:19.81+00:00",
+          "TripEnd": "2023-04-06T04:56:19.81+00:00",
+          "Description": "This is a test description2.",
+          "ShortDescription": "Chickamauga to Rock Spring",
+          "Total": 0.01
+        }
+      ],
+      "Payment": {
+        "PaymentId": "c8233fc7-8678-48d4-b11e-6599dde9ae8d",
+        "AssignedToPerson": {
+          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
+          "FirstName": "Wyatt",
+          "LastName": "Hardin",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Wyatt Hardin"
+        },
+        "Total": 600.00,
+        "IsPaidInFull": true,
+        "BillingDetails": null,
+        "Transactions": [
+          {
+            "TransactionId": "dec1b2eb-727d-4aba-a35d-14eba64c107f",
+            "PersonId": "00000000-0000-0000-0000-000000000000",
+            "PaymentType": 2,
+            "Amount": 550,
+            "Card": null,
+            "Check": {
+              "CheckId": "b34d6172-3181-4e5b-b624-455bea31e5a3",
+              "RoutingNumber": "898989898898",
+              "AccountNumber": "00098",
+              "CheckNumber": "77767"
+            },
+            "Cash": null
+          },
+          {
+            "TransactionId": "358870dc-0998-48b6-8de8-c3be82ce4091",
+            "PersonId": "00000000-0000-0000-0000-000000000000",
+            "PaymentType": 3,
+            "Amount": 50,
+            "Card": null,
+            "Check": null,
+            "Cash": null
+          }
+        ]
+      },
+      "ThankYouNote": "jkjkjkkkjkjkkjk"
+    },
+    {
+      "AssignedByPersonId": "fc92cfe4-d9cc-4ce7-94dd-194237a38a26",
+      "TripId": "f6068385-c33b-4c9e-a3b8-c7c7a510f3c4",
+      "Travellers": [
+        {
+          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
+          "FirstName": "Wyatt",
+          "LastName": "Hardin",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Wyatt Hardin"
+        }
+      ],
+      "Packages": [
+        {
+          "TripDetailId": "d2b668df-6106-4cd1-94ca-dff0f2f2ee22",
+          "TripStart": "2023-04-06T04:56:19.81+00:00",
+          "TripEnd": "2023-04-06T04:56:19.81+00:00",
+          "Description": "This is a test description.",
+          "ShortDescription": "Greece to Chattanooga",
+          "Total": 599.99
+        },
+        {
+          "TripDetailId": "e27fbaa6-8fa2-4f4d-9da7-307781bb7115",
+          "TripStart": "2023-04-06T04:56:19.81+00:00",
+          "TripEnd": "2023-04-06T04:56:19.81+00:00",
+          "Description": "This is a test description2.",
+          "ShortDescription": "Chickamauga to Rock Spring",
+          "Total": 0.01
+        }
+      ],
+      "Payment": {
+        "PaymentId": "d4891919-39b6-4096-94d3-a587a82e64a2",
+        "AssignedToPerson": {
+          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
+          "FirstName": "Wyatt",
+          "LastName": "Hardin",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Wyatt Hardin"
+        },
+        "Total": 600.00,
+        "IsPaidInFull": true,
+        "BillingDetails": null,
+        "Transactions": [
+          {
+            "TransactionId": "1d53792e-f7c1-4cb7-abe4-7043494bced1",
+            "PersonId": "00000000-0000-0000-0000-000000000000",
+            "PaymentType": 3,
+            "Amount": 600,
+            "Card": null,
+            "Check": null,
+            "Cash": null
+          }
+        ]
+      },
+      "ThankYouNote": "Wow thank you dude"
+    },
+    {
+      "AssignedByPersonId": "fc92cfe4-d9cc-4ce7-94dd-194237a38a26",
+      "TripId": "12dd841e-0082-4ab5-924f-b4944782410c",
+      "Travellers": [
+        {
+          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
+          "FirstName": "Wyatt",
+          "LastName": "Hardin",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Wyatt Hardin"
+        },
+        {
+          "PersonId": "ef010aab-85ff-42bc-bae0-d3cd7651da0b",
+          "FirstName": "adam",
+          "LastName": "ismon",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "adam ismon"
+        }
+      ],
+      "Packages": [
+        {
+          "TripDetailId": "d2b668df-6106-4cd1-94ca-dff0f2f2ee22",
+          "TripStart": "2023-04-06T04:56:19.81+00:00",
+          "TripEnd": "2023-04-06T04:56:19.81+00:00",
+          "Description": "This is a test description.",
+          "ShortDescription": "Greece to Chattanooga",
+          "Total": 599.99
+        },
+        {
+          "TripDetailId": "e27fbaa6-8fa2-4f4d-9da7-307781bb7115",
+          "TripStart": "2023-04-06T04:56:19.81+00:00",
+          "TripEnd": "2023-04-06T04:56:19.81+00:00",
+          "Description": "This is a test description2.",
+          "ShortDescription": "Chickamauga to Rock Spring",
+          "Total": 0.01
+        }
+      ],
+      "Payment": {
+        "PaymentId": "9b281f0d-384d-4eee-aa34-c7c82a7ea116",
+        "AssignedToPerson": {
+          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
+          "FirstName": "Wyatt",
+          "LastName": "Hardin",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Wyatt Hardin"
+        },
+        "Total": 600.00,
+        "IsPaidInFull": true,
+        "BillingDetails": null,
+        "Transactions": [
+          {
+            "TransactionId": "502d1b87-4385-4bec-b6b3-99bfb09aacce",
+            "PersonId": "00000000-0000-0000-0000-000000000000",
+            "PaymentType": 3,
+            "Amount": 600,
+            "Card": null,
+            "Check": null,
+            "Cash": null
+          }
+        ]
+      },
+      "ThankYouNote": "jkjjkjlkjlkjlkjjk"
+    },
+    {
+      "AssignedByPersonId": "fc92cfe4-d9cc-4ce7-94dd-194237a38a26",
+      "TripId": "f6a82992-4937-492a-9b11-ee43d83fa131",
+      "Travellers": [
+        {
+          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
+          "FirstName": "Wyatt",
+          "LastName": "Hardin",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Wyatt Hardin"
+        }
+      ],
+      "Packages": [
+        {
+          "TripDetailId": "d2b668df-6106-4cd1-94ca-dff0f2f2ee22",
+          "TripStart": "2023-04-06T04:56:19.81+00:00",
+          "TripEnd": "2023-04-06T04:56:19.81+00:00",
+          "Description": "This is a test description.",
+          "ShortDescription": "Greece to Chattanooga",
+          "Total": 599.99
+        }
+      ],
+      "Payment": {
+        "PaymentId": "ca6918ca-239c-454a-8d42-b5545cf61b1f",
+        "AssignedToPerson": {
+          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
+          "FirstName": "Wyatt",
+          "LastName": "Hardin",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Wyatt Hardin"
+        },
+        "Total": 599.99,
+        "IsPaidInFull": false,
+        "BillingDetails": null,
+        "Transactions": null
+      },
+      "ThankYouNote": null
+    },
+    {
+      "AssignedByPersonId": "b859f1a1-ce9e-4032-b8f1-0c11c7f8d7be",
+      "TripId": "a9d6ad5f-167d-4cd6-be79-edadf62dee06",
+      "Travellers": [
+        {
+          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
+          "FirstName": "Wyatt",
+          "LastName": "Hardin",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Wyatt Hardin"
+        }
+      ],
+      "Packages": [
+        {
+          "TripDetailId": "d2b668df-6106-4cd1-94ca-dff0f2f2ee22",
+          "TripStart": "2023-04-06T04:56:19.81+00:00",
+          "TripEnd": "2023-04-06T04:56:19.81+00:00",
+          "Description": "This is a test description.",
+          "ShortDescription": "Greece to Chattanooga",
+          "Total": 599.99
+        },
+        {
+          "TripDetailId": "e27fbaa6-8fa2-4f4d-9da7-307781bb7115",
+          "TripStart": "2023-04-06T04:56:19.81+00:00",
+          "TripEnd": "2023-04-06T04:56:19.81+00:00",
+          "Description": "This is a test description2.",
+          "ShortDescription": "Chickamauga to Rock Spring",
+          "Total": 0.01
+        }
+      ],
+      "Payment": {
+        "PaymentId": "b869d0f5-b78f-4ab4-ad08-63f26b18e349",
+        "AssignedToPerson": null,
+        "Total": 600.00,
+        "IsPaidInFull": false,
+        "BillingDetails": null,
+        "Transactions": null
+      },
+      "ThankYouNote": null
+    }
   ],
   "StateMachines": [
-    
+    {
+      "TripId": "034cfce0-2c0f-4e3c-970f-40ebb3fd1e13",
+      "CurrentState": 6,
+      "IsComplete": true
+    },
+    {
+      "TripId": "f6068385-c33b-4c9e-a3b8-c7c7a510f3c4",
+      "CurrentState": 6,
+      "IsComplete": true
+    },
+    {
+      "TripId": "12dd841e-0082-4ab5-924f-b4944782410c",
+      "CurrentState": 6,
+      "IsComplete": true
+    },
+    {
+      "TripId": "f6a82992-4937-492a-9b11-ee43d83fa131",
+      "CurrentState": 4,
+      "IsComplete": false
+    },
+    {
+      "TripId": "a9d6ad5f-167d-4cd6-be79-edadf62dee06",
+      "CurrentState": 3,
+      "IsComplete": false
+    }
   ],
   "Travellers": [
     {

@@ -87,7 +87,7 @@ public class TripStateMachine
     {
         if (tripId is not null)
         {
-            var stateMachine = await _dataStorageService.FetchTripState(Guid.Parse(tripId));
+            var stateMachine = await _dataStorageService.GetTripState(Guid.Parse(tripId));
             
             if (stateMachine.IsComplete) return null;
 
@@ -170,6 +170,9 @@ public class TripStateMachine
         await _dataStorageService.Write(storageData);
     }
 
+    /// <summary>
+    /// Saves state machine status
+    /// </summary>
     private async Task SaveStateMachineStatus()
     {
         var storageData = await _dataStorageService.Read();
@@ -185,6 +188,11 @@ public class TripStateMachine
         await _dataStorageService.Write(storageData);
     }
 
+    /// <summary>
+    /// Creates an itinerary object
+    /// </summary>
+    /// <param name="trip">trip objext</param>
+    /// <returns>itinerary</returns>
     private async Task<Itinerary> CreateItinerary(Trip trip)
     {
         var simple = new ConcreteItinerary();

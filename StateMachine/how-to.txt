@@ -1,4 +1,0 @@
-Need to load state on the fly
-
-next object in trip tree is null
-(travellers -> packages (null == start) -> billing -> etc.)

@@ -3,5 +3,4 @@
 public enum StateTransitions
 {
     GoNext = 1,
-    
 }

@@ -38,6 +38,7 @@ public class BillingDecorator : ItineraryDecorator
                 Amount = transaction.Amount
             };
                 
+            // assign payment type
             switch (transaction.PaymentType)
             {
                 case PaymentType.Card:
@@ -57,6 +58,11 @@ public class BillingDecorator : ItineraryDecorator
         return transactions;
     }
 
+    /// <summary>
+    /// Gets billing details of a trip
+    /// </summary>
+    /// <param name="trip">trip to get details from</param>
+    /// <returns>itinerary billing details object</returns>
     private List<ItineraryBillingDetails> GetBillingDetails(Trip trip)
     {
         var tripDetails = new List<ItineraryBillingDetails>();

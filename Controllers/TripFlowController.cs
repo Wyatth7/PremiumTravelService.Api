@@ -25,7 +25,11 @@ public class TripFlowController : BaseApiController
         _singletonService = singletonService;
     }
     
-    
+    /// <summary>
+    /// Create a trip
+    /// </summary>
+    /// <param name="agentId">ID of agent</param>
+    /// <returns>State of trip</returns>
     [HttpPost]
     [Route("create/{agentId:Guid:required}")]
     [Produces("application/json")]
@@ -37,6 +41,11 @@ public class TripFlowController : BaseApiController
         return new OkObjectResult(state);
     }
 
+    /// <summary>
+    /// Resumes trip at traveler state
+    /// </summary>
+    /// <param name="multiSelectResumeModel">multi select dto data</param>
+    /// <returns>trip state or itinerary</returns>
     [HttpPost]
     [Route("resume/travellers")]
     [Consumes("application/json")]
@@ -68,13 +77,18 @@ public class TripFlowController : BaseApiController
         
         var itinerary = await _stateMachineService.ResumeState(multiSelectResumeModel.TripId, travellers);
 
-        var tripState = (await _dataStorageService.FetchTripState(multiSelectResumeModel.TripId));
+        var tripState = (await _dataStorageService.GetTripState(multiSelectResumeModel.TripId));
 
         if (itinerary is null) return new OkObjectResult(tripState);
 
         return new OkObjectResult(itinerary);
     }
 
+    /// <summary>
+    /// Resumes trip at package state
+    /// </summary>
+    /// <param name="multiSelectResumeModel">multi select dto data</param>
+    /// <returns>trip state or itinerary</returns>
     [HttpPost]
     [Route("resume/packages")]
     [Consumes("application/json")]
@@ -105,11 +119,16 @@ public class TripFlowController : BaseApiController
 
         await _stateMachineService.ResumeState(multiSelectResumeModel.TripId, packages);
         
-        var tripState = (await _dataStorageService.FetchTripState(multiSelectResumeModel.TripId));
+        var tripState = (await _dataStorageService.GetTripState(multiSelectResumeModel.TripId));
 
         return new OkObjectResult(tripState);
     }
 
+    /// <summary>
+    /// Resumes trip at assign person state
+    /// </summary>
+    /// <param name="multiSelectResumeModel">multi select dto data</param>
+    /// <returns>trip state or itinerary</returns>
     [HttpPost]
     [Route("resume/payment/assignPerson")]
     [Produces("application/json")]
@@ -128,6 +147,11 @@ public class TripFlowController : BaseApiController
         return new OkObjectResult(tripState);
     }
 
+    /// <summary>
+    /// Resumes trip at person state
+    /// </summary>
+    /// <param name="multiSelectResumeModel">multi select dto data</param>
+    /// <returns>trip state or itinerary</returns>
     [HttpPost]
     [Route("resume/payment")]
     [Consumes("application/json")]
@@ -145,14 +169,14 @@ public class TripFlowController : BaseApiController
 
         await _stateMachineService.ResumeState(tripPaymentTransactionDto.TripId, transactionModel);
 
-        var totalRemaining = await _dataStorageService.FetchRemainingTripBalance(tripPaymentTransactionDto.TripId);
+        var totalRemaining = await _dataStorageService.GetRemainingTripBalance(tripPaymentTransactionDto.TripId);
 
         // if remaining balance is less than or equal
         // to 0, go to next state
         // else, get current state
         var state = totalRemaining <= 0
             ? await _stateMachineService.NextState(tripPaymentTransactionDto.TripId.ToString())
-            : await _dataStorageService.FetchTripState(tripPaymentTransactionDto.TripId);
+            : await _dataStorageService.GetTripState(tripPaymentTransactionDto.TripId);
         
         return totalRemaining > 0 ? 
                 new OkObjectResult(new AddTransactionReturnDto
@@ -165,6 +189,11 @@ public class TripFlowController : BaseApiController
             : new OkObjectResult(state);
     }
 
+    /// <summary>
+    /// Resumes trip at thank you note state
+    /// </summary>
+    /// <param name="multiSelectResumeModel">multi select dto data</param>
+    /// <returns>trip state or itinerary</returns>
     [HttpPost]
     [Route("resume/thankYouNote")]
     [Consumes("application/json")]
@@ -178,6 +207,11 @@ public class TripFlowController : BaseApiController
         return new OkResult();
     }
 
+    /// <summary>
+    /// Creates an itinerary for a trip
+    /// </summary>
+    /// <param name="tripId">ID of trip</param>
+    /// <returns>An itinerary of a trip</returns>
     [HttpPost]
     [Route("resume/itinerary/{tripId:Guid:required}")]
     [Produces("application/json")]
@@ -188,16 +222,26 @@ public class TripFlowController : BaseApiController
         return new OkObjectResult(itinerary);
     }
 
+    /// <summary>
+    /// Gets current state of a trip
+    /// </summary>
+    /// <param name="tripId">ID of a trip</param>
+    /// <returns>TripState object of specified trip</returns>
     [HttpGet]
     [Route("state/{tripId:Guid:required}")]
     [Produces("application/json")]
     public async Task<IActionResult> GetCurrentTripState([FromRoute] Guid tripId)
     {
-        var state = await _dataStorageService.FetchTripState(tripId);
+        var state = await _dataStorageService.GetTripState(tripId);
 
         return new OkObjectResult(state);
     }
 
+    /// <summary>
+    /// Moves trip to next state
+    /// </summary>
+    /// <param name="tripId">ID of a trip</param>
+    /// <returns>state of a trip</returns>
     [HttpPost]
     [Route("next/{tripId:required}")]
     [Produces("application/json")]

@@ -5,7 +5,5 @@ namespace PremiumTravelService.Api.Decorator;
 
 public abstract class ItineraryBase : IItinerary
 {
-
-    // public Persistence.Entities.Itinerary.Itinerary Itinerary = new();
     public abstract Task<Itinerary> PopulateItinerary(Trip trip, Itinerary itinerary);
 }

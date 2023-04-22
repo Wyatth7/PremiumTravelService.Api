@@ -34,7 +34,7 @@ public class DataStorageService : IDataStorageService
         return await _fileHandler.Read(_path);
     }
     
-    public async Task<Trip> FetchTrip(Guid tripId)
+    public async Task<Trip> GetTrip(Guid tripId)
     {
         var storageData = await Read();
 
@@ -42,7 +42,7 @@ public class DataStorageService : IDataStorageService
             .FirstOrDefault(trip => trip.TripId == tripId);
     }
 
-    public async Task<TripState> FetchTripState(Guid tripId)
+    public async Task<TripState> GetTripState(Guid tripId)
     {
         var storageData = await Read();
 
@@ -50,7 +50,7 @@ public class DataStorageService : IDataStorageService
             .FirstOrDefault(sm => sm.TripId == tripId);
     }
 
-    public async Task<decimal> FetchRemainingTripBalance(Guid tripId)
+    public async Task<decimal> GetRemainingTripBalance(Guid tripId)
     {
         var storageData = await Read();
 

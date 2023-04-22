@@ -26,21 +26,21 @@ public interface IDataStorageService
     /// </summary>
     /// <param name="tripId">Id of trip to fetch</param>
     /// <returns>Trip or null</returns>
-    Task<Trip> FetchTrip(Guid tripId);
+    Task<Trip> GetTrip(Guid tripId);
 
     /// <summary>
     /// Fetches specific trip state from storage
     /// </summary>
     /// <param name="tripId">Id of trip state to fetch</param>
     /// <returns>trip state or null</returns>
-    Task<TripState> FetchTripState(Guid tripId);
+    Task<TripState> GetTripState(Guid tripId);
 
     /// <summary>
     /// Gets a trips remaining balance
     /// </summary>
     /// <param name="tripId">ID of trip</param>
     /// <returns>remaining balance</returns>
-    Task<decimal> FetchRemainingTripBalance(Guid tripId);
+    Task<decimal> GetRemainingTripBalance(Guid tripId);
 
     /// <summary>
     /// Gets list of travellers for a trip
