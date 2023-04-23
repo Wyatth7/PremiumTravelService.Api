@@ -8,8 +8,12 @@ namespace PremiumTravelService.Api.NunitTests;
 [TestFixture]
 public class FactoryTests
 {
+    /// <summary>
+    /// This test ensures that the create file handler method appropriately
+    /// creates a JSON handler
+    /// </summary>
     [Test]
-    public void StorageFactoryFileHandlerCreates_JSON()
+    public void VerifyStorageFactoryFileHandlerCreates_JSON()
     {
         StorageFactory storageFactory = new StorageFactory();
         var jsonFileHandler = storageFactory.CreateFileHandler("json");
@@ -17,8 +21,12 @@ public class FactoryTests
         Assert.AreEqual(jsonFileHandler.GetType(), new JsonFileHandler().GetType());
     }
 
+    /// <summary>
+    /// This test ensures that the create file handler method appropriately
+    /// creates a XML handler
+    /// </summary>
     [Test]
-    public void StorageFactoryFileHandlerCreates_XML()
+    public void VerifyStorageFactoryFileHandlerCreates_XML()
     {
         StorageFactory storageFactory = new StorageFactory();
         var xmlFileHandler = storageFactory.CreateFileHandler("xml");
@@ -26,8 +34,12 @@ public class FactoryTests
         Assert.AreEqual(xmlFileHandler.GetType(), new XmlFileHandler().GetType());
     }
 
+    /// <summary>
+    /// This test ensures that the create file handler method appropriately
+    /// throws an exception when invalid args are given
+    /// </summary>
     [Test]
-    public void StorageFactoryFileHandlerThrowsExceptionWhenInvalidArg()
+    public void VerifyStorageFactoryFileHandlerThrowsExceptionWhenInvalidArg()
     {
         StorageFactory storageFactory = new StorageFactory();
 
