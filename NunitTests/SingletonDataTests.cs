@@ -13,11 +13,11 @@ public class SingletonTests
     [Test]
     public async Task verifyTravellerSingletonContainsData()
     {
-        TravellerSingleton ts = new TravellerSingleton();
-        
+        TravellerSingleton ts = TravellerSingleton.GetInstance();
+
         var data = await ts.GetData();
 
-        Assert.AreEqual(TravellerSingleton.GetInstance().ToString(), "PremiumTravelService.Api.Singleton.TravellerSingleton");
+        Assert.AreEqual(ts.ToString(), "PremiumTravelService.Api.Singleton.TravellerSingleton");
         Assert.IsTrue(data.Count() > 0);
         Assert.AreEqual(data.ElementAt(0).LastName, "Hardin");
         Assert.AreEqual(data.ElementAt(1).LastName, "ismon");
@@ -29,11 +29,11 @@ public class SingletonTests
     [Test]
     public async Task verifyPackageSingletonContainsData()
     {
-        PackageSingleton ps = new PackageSingleton();
+        PackageSingleton ps = PackageSingleton.GetInstance();
 
         var data = await ps.GetData();
 
-        Assert.AreEqual(PackageSingleton.GetInstance().ToString(), "PremiumTravelService.Api.Singleton.PackageSingleton");
+        Assert.AreEqual(ps.ToString(), "PremiumTravelService.Api.Singleton.PackageSingleton");
         Assert.IsTrue(data.Count() > 0);
         Assert.AreEqual(data.ElementAt(0).TripDetailId.ToString(), "8a3cb3be-e55f-4468-a48e-8940b10741df");
         Assert.AreEqual(data.ElementAt(1).TripDetailId.ToString(), "8a3cb3be-e55f-4468-a48e-8540b10741df");
@@ -46,11 +46,11 @@ public class SingletonTests
     [Test]
     public async Task verifyAgentSingletonContainsData()
     {
-        AgentSingleton ags = new AgentSingleton();
+        AgentSingleton ags = AgentSingleton.GetInstance();
 
         var data = await ags.GetData();
 
-        Assert.AreEqual(AgentSingleton.GetInstance().ToString(), "PremiumTravelService.Api.Singleton.AgentSingleton");
+        Assert.AreEqual(ags.ToString(), "PremiumTravelService.Api.Singleton.AgentSingleton");
         Assert.IsTrue(data.Count() > 0);
         Assert.AreEqual(data.ElementAt(0).LastName, "Crowley");
     }
