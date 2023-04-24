@@ -4,36 +4,49 @@ using PremiumTravelService.Api.Persistence.Entities.Trip.Bills.CardInformation;
 using PremiumTravelService.Api.Persistence.Entities.Trip.Bills.ChargeInformation;
 using PremiumTravelService.Api.Persistence.Entities.Trip.Bills.CheckInformation;
 using PremiumTravelService.Api.Persistence.Enums;
+using PremiumTravelService.Api.Services.DataStorage;
 
 namespace PremiumTravelService.Api.Decorator.Decorators;
 
 public class BillingDecorator : ItineraryDecorator
 {
-    public BillingDecorator(ItineraryBase itineraryBase) : base(itineraryBase)
+    private readonly IDataStorageService _dataStorageService;
+    
+    public BillingDecorator(ItineraryBase itineraryBase, IDataStorageService dataStorageService) : base(itineraryBase)
     {
+        _dataStorageService = dataStorageService;
     }
     
     public override async Task<Itinerary> PopulateItinerary(Trip trip, Itinerary itinerary)
     {
+        var transactions = await GetTransactions(trip);
+        
         itinerary.Billing = new ItineraryBilling
         {
             Total = trip.Payment.Total,
-            Transactions = GetTransactions(trip).ToArray(),
+            Transactions = transactions.ToArray(),
             BillingDetails = GetBillingDetails(trip).ToArray()
         };
         
         return await base.PopulateItinerary(trip, itinerary);
     }
 
-    private List<Transactions> GetTransactions(Trip trip)
+    private async Task<List<Transactions>> GetTransactions(Trip trip)
     {
         var transactions = new List<Transactions>();
         foreach (var transaction in trip.Payment.Transactions)
         {
+
+            // Get list of all application travelers.
+            // Not sure why all travelers in the singleton can be assigned to pay,
+            // but it's in Iteration 3 requirements as such.
+            var storageData = await _dataStorageService.Read();
+            var paidByPerson = storageData.Travellers
+                .FirstOrDefault(p => p.PersonId == trip.Payment.AssignedToPerson.PersonId);
+            
             var finalTransaction = new Transactions
             {
-                PaidByName = trip.Travellers
-                    .First(t => trip.Payment.AssignedToPerson.PersonId == t.PersonId).NameFull,
+                PaidByName = paidByPerson is not null ? paidByPerson.NameFull : "Traveler",
                 PaymentType = transaction.PaymentType,
                 Amount = transaction.Amount
             };

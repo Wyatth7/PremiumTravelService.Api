@@ -198,7 +198,7 @@ public class TripStateMachine
         var simple = new ConcreteItinerary();
         var travellers = new TravellerDecorator(simple);
         var details = new TripDetailsDecorator(travellers);
-        var billing = new BillingDecorator(details);
+        var billing = new BillingDecorator(details, _dataStorageService);
         var booking = new BookingDecorator(billing);
 
         return await booking.PopulateItinerary(trip,new Itinerary());

@@ -156,7 +156,7 @@ public class TestController : BaseApiController
 
         var travellers = new TravellerDecorator(simple);
         var details = new TripDetailsDecorator(travellers);
-        var billing = new BillingDecorator(details);
+        var billing = new BillingDecorator(details, _dataStorageService);
         var booking = new BookingDecorator(billing);
 
         var storageData = await _dataStorageService.Read();
