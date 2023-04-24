@@ -41,12 +41,12 @@ public class TripReloadTests
         var testInitialState = await StateMachineService.Object.CreateState(Guid.NewGuid());
 
         // ensure current state is Create
-        Assert.AreEqual(testInitialState.CurrentState, initialTripState.CurrentState);
+        Assert.AreEqual(testInitialState.CurrentState, StateType.Create);
 
         // advance to next state
         var testNextState = await StateMachineService.Object.NextState("");
 
         // ensure next state is Travellers
-        Assert.AreEqual(testNextState.CurrentState, nextTripState.CurrentState);
+        Assert.AreEqual(testNextState.CurrentState, StateType.Travellers);
     }
 }
