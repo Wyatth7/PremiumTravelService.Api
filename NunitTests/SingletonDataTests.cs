@@ -35,8 +35,8 @@ public class SingletonTests
 
         Assert.AreEqual(ps.ToString(), "PremiumTravelService.Api.Singleton.PackageSingleton");
         Assert.IsTrue(data.Count() > 0);
-        Assert.AreEqual(data.ElementAt(0).TripDetailId.ToString(), "8a3cb3be-e55f-4468-a48e-8940b10741df");
-        Assert.AreEqual(data.ElementAt(1).TripDetailId.ToString(), "8a3cb3be-e55f-4468-a48e-8540b10741df");
+        Assert.AreEqual(data.ElementAt(0).TripDetailId.ToString(), "d2b668df-6106-4cd1-94ca-dff0f2f2ee22");
+        Assert.AreEqual(data.ElementAt(1).TripDetailId.ToString(), "e27fbaa6-8fa2-4f4d-9da7-307781bb7115");
     }
 
 
