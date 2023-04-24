@@ -20,10 +20,10 @@ public class TripReloadTests
     /// and reloaded later with its new state applied
     /// </summary>
     [Test]
-	public async Task verifyTripReloadsToCorrectState()
+	public async Task VerifyTripReloadsToCorrectState()
 	{
         // Mock state machine interface
-        var StateMachineService = new Mock<IStateMachineService>();
+        var stateMachineService = new Mock<IStateMachineService>();
 
         // create sample trip in the "Create" state
         TripState initialTripState = new TripState();
@@ -34,17 +34,17 @@ public class TripReloadTests
         nextTripState.CurrentState = StateType.Travellers;
             
         // Mock intended behavior
-        StateMachineService.Setup(p => p.CreateState(It.IsAny<Guid>())).Returns(Task.FromResult(initialTripState));
-        StateMachineService.Setup(p => p.NextState(It.IsAny<String>())).Returns(Task.FromResult(nextTripState));
+        stateMachineService.Setup(p => p.CreateState(It.IsAny<Guid>())).Returns(Task.FromResult(initialTripState));
+        stateMachineService.Setup(p => p.NextState(It.IsAny<String>())).Returns(Task.FromResult(nextTripState));
 
         // CreateState result
-        var testInitialState = await StateMachineService.Object.CreateState(Guid.NewGuid());
+        var testInitialState = await stateMachineService.Object.CreateState(Guid.NewGuid());
 
         // ensure current state is Create
         Assert.AreEqual(testInitialState.CurrentState, StateType.Create);
 
         // advance to next state
-        var testNextState = await StateMachineService.Object.NextState("");
+        var testNextState = await stateMachineService.Object.NextState("");
 
         // ensure next state is Travellers
         Assert.AreEqual(testNextState.CurrentState, StateType.Travellers);

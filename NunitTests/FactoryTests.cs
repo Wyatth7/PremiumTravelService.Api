@@ -13,9 +13,9 @@ public class FactoryTests
     /// creates a JSON handler
     /// </summary>
     [Test]
-    public void VerifyStorageFactoryFileHandlerCreates_JSON()
+    public void VerifyStorageFactoryFileHandlerCreatesJson()
     {
-        StorageFactory storageFactory = new StorageFactory();
+        var storageFactory = new StorageFactory();
         var jsonFileHandler = storageFactory.CreateFileHandler("json");
 
         Assert.AreEqual(jsonFileHandler.GetType(), new JsonFileHandler().GetType());
@@ -26,9 +26,9 @@ public class FactoryTests
     /// creates a XML handler
     /// </summary>
     [Test]
-    public void VerifyStorageFactoryFileHandlerCreates_XML()
+    public void VerifyStorageFactoryFileHandlerCreatesXml()
     {
-        StorageFactory storageFactory = new StorageFactory();
+        var storageFactory = new StorageFactory();
         var xmlFileHandler = storageFactory.CreateFileHandler("xml");
 
         Assert.AreEqual(xmlFileHandler.GetType(), new XmlFileHandler().GetType());
@@ -41,7 +41,7 @@ public class FactoryTests
     [Test]
     public void VerifyStorageFactoryFileHandlerThrowsExceptionWhenInvalidArg()
     {
-        StorageFactory storageFactory = new StorageFactory();
+        var storageFactory = new StorageFactory();
 
         Assert.Throws<InvalidOperationException>(() =>
         {

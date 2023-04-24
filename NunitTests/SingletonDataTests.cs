@@ -11,14 +11,14 @@ public class SingletonTests
     /// This test ensures that the traveller singleton contains valid data
     /// </summary>
     [Test]
-    public async Task verifyTravellerSingletonContainsData()
+    public async Task VerifyTravellerSingletonContainsData()
     {
-        TravellerSingleton ts = TravellerSingleton.GetInstance();
+        var ts = TravellerSingleton.GetInstance();
 
         var data = await ts.GetData();
 
         Assert.AreEqual(ts.ToString(), "PremiumTravelService.Api.Singleton.TravellerSingleton");
-        Assert.IsTrue(data.Count() > 0);
+        Assert.IsTrue(data.Any());
         Assert.AreEqual(data.ElementAt(0).LastName, "Hardin");
         Assert.AreEqual(data.ElementAt(1).LastName, "ismon");
     }
@@ -27,14 +27,14 @@ public class SingletonTests
     /// This test ensures that the package singleton contains valid data
     /// </summary>
     [Test]
-    public async Task verifyPackageSingletonContainsData()
+    public async Task VerifyPackageSingletonContainsData()
     {
-        PackageSingleton ps = PackageSingleton.GetInstance();
+        var ps = PackageSingleton.GetInstance();
 
         var data = await ps.GetData();
 
         Assert.AreEqual(ps.ToString(), "PremiumTravelService.Api.Singleton.PackageSingleton");
-        Assert.IsTrue(data.Count() > 0);
+        Assert.IsTrue(data.Any());
         Assert.AreEqual(data.ElementAt(0).TripDetailId.ToString(), "d2b668df-6106-4cd1-94ca-dff0f2f2ee22");
         Assert.AreEqual(data.ElementAt(1).TripDetailId.ToString(), "e27fbaa6-8fa2-4f4d-9da7-307781bb7115");
     }
@@ -44,14 +44,14 @@ public class SingletonTests
     /// This test ensures that the agent singleton contains valid data
     /// </summary>
     [Test]
-    public async Task verifyAgentSingletonContainsData()
+    public async Task VerifyAgentSingletonContainsData()
     {
-        AgentSingleton ags = AgentSingleton.GetInstance();
+        var ags = AgentSingleton.GetInstance();
 
         var data = await ags.GetData();
 
         Assert.AreEqual(ags.ToString(), "PremiumTravelService.Api.Singleton.AgentSingleton");
-        Assert.IsTrue(data.Count() > 0);
+        Assert.IsTrue(data.Any());
         Assert.AreEqual(data.ElementAt(0).LastName, "Crowley");
     }
 }
