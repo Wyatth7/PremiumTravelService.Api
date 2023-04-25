@@ -150,7 +150,7 @@ public class TripFlowController : BaseApiController
     /// <summary>
     /// Resumes trip at person state
     /// </summary>
-    /// <param name="multiSelectResumeModel">multi select dto data</param>
+    /// <param name="tripPaymentTransactionDto">transaction DTO data</param>
     /// <returns>trip state or itinerary</returns>
     [HttpPost]
     [Route("resume/payment")]
@@ -164,7 +164,8 @@ public class TripFlowController : BaseApiController
             Total = tripPaymentTransactionDto.Amount,
             Card = tripPaymentTransactionDto.Card,
             Cash = tripPaymentTransactionDto.Cash,
-            Check = tripPaymentTransactionDto.Check
+            Check = tripPaymentTransactionDto.Check,
+            Loan = tripPaymentTransactionDto.Loan
         };
 
         await _stateMachineService.ResumeState(tripPaymentTransactionDto.TripId, transactionModel);
