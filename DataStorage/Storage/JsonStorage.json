@@ -167,11 +167,51 @@
               }
             },
             "Check": null,
-            "Cash": null
+            "Cash": null,
+            "Loan": null
           }
         ]
       },
       "ThankYouNote": "Mr. Pickles \u2013 Your trip to Fiji is all set. I have booked top-quality transport for every leg of your trip. I am including a fine bottle of your favorite drink, Boones Farm Sunshine Pink, to enjoy along the way. If you have any questions or problems, call me anytime. Safe travels! Bill Bryson, Certified Premium Travel Service Agent"
+    },
+    {
+      "AssignedByPersonId": "b859f1a1-ce9e-4032-b8f1-0c11c7f8d7be",
+      "TripId": "ed6ba96d-902a-46aa-bd3c-3d7497b8c724",
+      "Travellers": [
+        {
+          "PersonId": "e191a7a2-93d0-45cf-8bd4-053670bcd6e2",
+          "FirstName": "Mr. Poe",
+          "LastName": "Pickles",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Mr. Poe Pickles"
+        },
+        {
+          "PersonId": "c48d1387-14c6-490a-a723-29fb1ab69eaa",
+          "FirstName": "Mr. Pickles",
+          "LastName": "Friend #1",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Mr. Pickles Friend #1"
+        },
+        {
+          "PersonId": "12e0b216-1658-4cff-bb52-daf2f4d7381b",
+          "FirstName": "Mr. Pickles",
+          "LastName": "Friend #2",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Mr. Pickles Friend #2"
+        }
+      ],
+      "Packages": null,
+      "Payment": null,
+      "ThankYouNote": null
     }
   ],
   "StateMachines": [
@@ -179,6 +219,11 @@
       "TripId": "b09d7154-a95f-4ae0-ad29-f4e8218f6f74",
       "CurrentState": 6,
       "IsComplete": true
+    },
+    {
+      "TripId": "ed6ba96d-902a-46aa-bd3c-3d7497b8c724",
+      "CurrentState": 2,
+      "IsComplete": false
     }
   ],
   "Travellers": [
