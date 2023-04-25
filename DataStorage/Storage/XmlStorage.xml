@@ -165,11 +165,6 @@
       <CurrentState>Itinerary</CurrentState>
       <IsComplete>true</IsComplete>
     </TripState>
-    <TripState>
-      <TripId>e65525ed-28d4-4caf-bdb0-f4ed11220294</TripId>
-      <CurrentState>Itinerary</CurrentState>
-      <IsComplete>true</IsComplete>
-    </TripState>
   </StateMachines>
   <Travellers />
   <Agents />
