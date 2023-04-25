@@ -2,598 +2,248 @@
   "Trips": [
     {
       "AssignedByPersonId": "b859f1a1-ce9e-4032-b8f1-0c11c7f8d7be",
-      "TripId": "034cfce0-2c0f-4e3c-970f-40ebb3fd1e13",
+      "TripId": "b09d7154-a95f-4ae0-ad29-f4e8218f6f74",
       "Travellers": [
         {
-          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
+          "PersonId": "e191a7a2-93d0-45cf-8bd4-053670bcd6e2",
+          "FirstName": "Mr. Poe",
+          "LastName": "Pickles",
           "Email": "whardin1010@gmail.com",
           "Phone": "4236642960",
           "IsEmployee": false,
           "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
+          "NameFull": "Mr. Poe Pickles"
+        },
+        {
+          "PersonId": "c48d1387-14c6-490a-a723-29fb1ab69eaa",
+          "FirstName": "Mr. Pickles",
+          "LastName": "Friend #1",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Mr. Pickles Friend #1"
+        },
+        {
+          "PersonId": "12e0b216-1658-4cff-bb52-daf2f4d7381b",
+          "FirstName": "Mr. Pickles",
+          "LastName": "Friend #2",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Mr. Pickles Friend #2"
+        },
+        {
+          "PersonId": "c7149bea-b942-47b3-9b58-73575d7cab0f",
+          "FirstName": "Mr. Pickles",
+          "LastName": "Friend #3",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Mr. Pickles Friend #3"
+        },
+        {
+          "PersonId": "5aae38ba-0e5a-42e9-9527-ee8852ed561f",
+          "FirstName": "Mr. Pickles",
+          "LastName": "Friend #4",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Mr. Pickles Friend #4"
+        },
+        {
+          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
+          "FirstName": "Mr. Pickles",
+          "LastName": "Friend #5",
+          "Email": "whardin1010@gmail.com",
+          "Phone": "4236642960",
+          "IsEmployee": false,
+          "CardDetails": null,
+          "NameFull": "Mr. Pickles Friend #5"
         }
       ],
       "Packages": [
         {
-          "TripDetailId": "d2b668df-6106-4cd1-94ca-dff0f2f2ee22",
-          "TripStart": "2023-04-06T04:56:19.81+00:00",
-          "TripEnd": "2023-04-06T04:56:19.81+00:00",
-          "Description": "This is a test description.",
-          "ShortDescription": "Greece to Chattanooga",
-          "Total": 599.99
+          "TripDetailId": "4d0b1eee-51b5-4f88-a145-01039da0d178",
+          "TripStart": "2023-10-05T10:00:19.81+00:00",
+          "TripEnd": "2023-10-01T11:00:19.81+00:00",
+          "Description": "Helicopter from Casa Pickles to Los Angeles Airport",
+          "ShortDescription": "Helicopter from Casa Pickles to Los Angeles Airport",
+          "Total": 4000.00
         },
         {
-          "TripDetailId": "e27fbaa6-8fa2-4f4d-9da7-307781bb7115",
-          "TripStart": "2023-04-06T04:56:19.81+00:00",
-          "TripEnd": "2023-04-06T04:56:19.81+00:00",
-          "Description": "This is a test description2.",
-          "ShortDescription": "Chickamauga to Rock Spring",
-          "Total": 0.01
+          "TripDetailId": "9c9bba6c-f55c-4125-a3f9-b6451dc8f646",
+          "TripStart": "2023-10-05T12:00:19.81+00:00",
+          "TripEnd": "2023-10-01T22:00:19.81+00:00",
+          "Description": "Private Jet from Los Angeles Airport to Fiji Airport",
+          "ShortDescription": "Private Jet from Los Angeles Airport to Fiji Airport",
+          "Total": 17000.00
+        },
+        {
+          "TripDetailId": "9a788910-fb42-4dab-a763-36438ba2f5d3",
+          "TripStart": "2023-10-05T22:00:19.81+00:00",
+          "TripEnd": "2023-10-05T23:00:19.81+00:00",
+          "Description": "Limousine from Fiji Airport to Fiji Marina",
+          "ShortDescription": "Limousine from Fiji Airport to Fiji Marina",
+          "Total": 500.00
+        },
+        {
+          "TripDetailId": "9c4b8d8c-5140-4f12-917f-435029010800",
+          "TripStart": "2023-10-05T22:00:19.81+00:00",
+          "TripEnd": "2023-10-05T09:00:19.81+00:00",
+          "Description": "Yacht from Fiji Marina to Paradise Pickles Private Island",
+          "ShortDescription": "Yacht from Fiji Marina to Paradise Pickles Private Island",
+          "Total": 12000.00
+        },
+        {
+          "TripDetailId": "f06dab15-cdb8-45b5-9649-7eecf0507564",
+          "TripStart": "2023-10-19T09:00:19.81+00:00",
+          "TripEnd": "2023-10-19T17:00:19.81+00:00",
+          "Description": "Yacht from Paradise Pickles Private Island to Fiji Marina",
+          "ShortDescription": "Yacht from Paradise Pickles Private Island to Fiji Marina",
+          "Total": 12000.00
+        },
+        {
+          "TripDetailId": "9cab2778-6ce4-444e-8cd6-62c634172740",
+          "TripStart": "2023-10-19T17:00:19.81+00:00",
+          "TripEnd": "2023-10-19T18:00:19.81+00:00",
+          "Description": "Limousine from Fiji Marina to Fiji Airport",
+          "ShortDescription": "Limousine from Fiji Marina to Fiji Airport",
+          "Total": 500.00
+        },
+        {
+          "TripDetailId": "b12eec62-3d6d-4116-874c-6c9dcbd2d164",
+          "TripStart": "2023-10-19T18:00:19.81+00:00",
+          "TripEnd": "2023-10-20T02:00:19.81+00:00",
+          "Description": "Private Jet from Fiji Airport to San Diego Airport",
+          "ShortDescription": "Private Jet from Fiji Airport to San Diego Airport",
+          "Total": 23000.00
+        },
+        {
+          "TripDetailId": "5f728560-11b0-4f61-85e4-2040b31acb0d",
+          "TripStart": "2023-10-19T18:00:19.81+00:00",
+          "TripEnd": "2023-10-20T02:00:19.81+00:00",
+          "Description": "Helicopter from San Diego Airport to Palace Pickle",
+          "ShortDescription": "Helicopter from San Diego Airport to Palace Pickle",
+          "Total": 5000.00
         }
       ],
       "Payment": {
-        "PaymentId": "c8233fc7-8678-48d4-b11e-6599dde9ae8d",
+        "PaymentId": "66d239c5-6e76-46ca-ac66-5fed7c026094",
         "AssignedToPerson": {
-          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
+          "PersonId": "e191a7a2-93d0-45cf-8bd4-053670bcd6e2",
+          "FirstName": "Mr. Poe",
+          "LastName": "Pickles",
           "Email": "whardin1010@gmail.com",
           "Phone": "4236642960",
           "IsEmployee": false,
           "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
+          "NameFull": "Mr. Poe Pickles"
         },
-        "Total": 600.00,
+        "Total": 74000.00,
         "IsPaidInFull": true,
         "BillingDetails": null,
         "Transactions": [
           {
-            "TransactionId": "dec1b2eb-727d-4aba-a35d-14eba64c107f",
-            "PersonId": "00000000-0000-0000-0000-000000000000",
-            "PaymentType": 2,
-            "Amount": 550,
-            "Card": null,
-            "Check": {
-              "CheckId": "b34d6172-3181-4e5b-b624-455bea31e5a3",
-              "RoutingNumber": "898989898898",
-              "AccountNumber": "00098",
-              "CheckNumber": "77767"
-            },
-            "Cash": null
-          },
-          {
-            "TransactionId": "358870dc-0998-48b6-8de8-c3be82ce4091",
-            "PersonId": "00000000-0000-0000-0000-000000000000",
-            "PaymentType": 3,
-            "Amount": 50,
-            "Card": null,
-            "Check": null,
-            "Cash": null
-          }
-        ]
-      },
-      "ThankYouNote": "jkjkjkkkjkjkkjk"
-    },
-    {
-      "AssignedByPersonId": "fc92cfe4-d9cc-4ce7-94dd-194237a38a26",
-      "TripId": "f6068385-c33b-4c9e-a3b8-c7c7a510f3c4",
-      "Travellers": [
-        {
-          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        }
-      ],
-      "Packages": [
-        {
-          "TripDetailId": "d2b668df-6106-4cd1-94ca-dff0f2f2ee22",
-          "TripStart": "2023-04-06T04:56:19.81+00:00",
-          "TripEnd": "2023-04-06T04:56:19.81+00:00",
-          "Description": "This is a test description.",
-          "ShortDescription": "Greece to Chattanooga",
-          "Total": 599.99
-        },
-        {
-          "TripDetailId": "e27fbaa6-8fa2-4f4d-9da7-307781bb7115",
-          "TripStart": "2023-04-06T04:56:19.81+00:00",
-          "TripEnd": "2023-04-06T04:56:19.81+00:00",
-          "Description": "This is a test description2.",
-          "ShortDescription": "Chickamauga to Rock Spring",
-          "Total": 0.01
-        }
-      ],
-      "Payment": {
-        "PaymentId": "d4891919-39b6-4096-94d3-a587a82e64a2",
-        "AssignedToPerson": {
-          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        },
-        "Total": 600.00,
-        "IsPaidInFull": true,
-        "BillingDetails": null,
-        "Transactions": [
-          {
-            "TransactionId": "1d53792e-f7c1-4cb7-abe4-7043494bced1",
-            "PersonId": "00000000-0000-0000-0000-000000000000",
-            "PaymentType": 3,
-            "Amount": 600,
-            "Card": null,
-            "Check": null,
-            "Cash": null
-          }
-        ]
-      },
-      "ThankYouNote": "Wow thank you dude"
-    },
-    {
-      "AssignedByPersonId": "fc92cfe4-d9cc-4ce7-94dd-194237a38a26",
-      "TripId": "12dd841e-0082-4ab5-924f-b4944782410c",
-      "Travellers": [
-        {
-          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        },
-        {
-          "PersonId": "ef010aab-85ff-42bc-bae0-d3cd7651da0b",
-          "FirstName": "adam",
-          "LastName": "ismon",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "adam ismon"
-        }
-      ],
-      "Packages": [
-        {
-          "TripDetailId": "d2b668df-6106-4cd1-94ca-dff0f2f2ee22",
-          "TripStart": "2023-04-06T04:56:19.81+00:00",
-          "TripEnd": "2023-04-06T04:56:19.81+00:00",
-          "Description": "This is a test description.",
-          "ShortDescription": "Greece to Chattanooga",
-          "Total": 599.99
-        },
-        {
-          "TripDetailId": "e27fbaa6-8fa2-4f4d-9da7-307781bb7115",
-          "TripStart": "2023-04-06T04:56:19.81+00:00",
-          "TripEnd": "2023-04-06T04:56:19.81+00:00",
-          "Description": "This is a test description2.",
-          "ShortDescription": "Chickamauga to Rock Spring",
-          "Total": 0.01
-        }
-      ],
-      "Payment": {
-        "PaymentId": "9b281f0d-384d-4eee-aa34-c7c82a7ea116",
-        "AssignedToPerson": {
-          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        },
-        "Total": 600.00,
-        "IsPaidInFull": true,
-        "BillingDetails": null,
-        "Transactions": [
-          {
-            "TransactionId": "502d1b87-4385-4bec-b6b3-99bfb09aacce",
-            "PersonId": "00000000-0000-0000-0000-000000000000",
-            "PaymentType": 3,
-            "Amount": 600,
-            "Card": null,
-            "Check": null,
-            "Cash": null
-          }
-        ]
-      },
-      "ThankYouNote": "jkjjkjlkjlkjlkjjk"
-    },
-    {
-      "AssignedByPersonId": "b859f1a1-ce9e-4032-b8f1-0c11c7f8d7be",
-      "TripId": "1236810a-5913-427a-9e72-8f2f8ee24310",
-      "Travellers": [
-        {
-          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        }
-      ],
-      "Packages": [
-        {
-          "TripDetailId": "d2b668df-6106-4cd1-94ca-dff0f2f2ee22",
-          "TripStart": "2023-04-06T04:56:19.81+00:00",
-          "TripEnd": "2023-04-06T04:56:19.81+00:00",
-          "Description": "This is a test description.",
-          "ShortDescription": "Greece to Chattanooga",
-          "Total": 599.99
-        },
-        {
-          "TripDetailId": "e27fbaa6-8fa2-4f4d-9da7-307781bb7115",
-          "TripStart": "2023-04-06T04:56:19.81+00:00",
-          "TripEnd": "2023-04-06T04:56:19.81+00:00",
-          "Description": "This is a test description2.",
-          "ShortDescription": "Chickamauga to Rock Spring",
-          "Total": 0.01
-        }
-      ],
-      "Payment": {
-        "PaymentId": "66d73665-8851-4a54-ba08-0be6e6a99bd7",
-        "AssignedToPerson": {
-          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        },
-        "Total": 600.00,
-        "IsPaidInFull": true,
-        "BillingDetails": null,
-        "Transactions": [
-          {
-            "TransactionId": "60fda767-c1fb-435d-93f6-cd0fa5567698",
-            "PersonId": "00000000-0000-0000-0000-000000000000",
-            "PaymentType": 3,
-            "Amount": 600,
-            "Card": null,
-            "Check": null,
-            "Cash": null
-          }
-        ]
-      },
-      "ThankYouNote": "njjnjjnj"
-    },
-    {
-      "AssignedByPersonId": "b859f1a1-ce9e-4032-b8f1-0c11c7f8d7be",
-      "TripId": "a9d6ad5f-167d-4cd6-be79-edadf62dee06",
-      "Travellers": [
-        {
-          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        }
-      ],
-      "Packages": [
-        {
-          "TripDetailId": "d2b668df-6106-4cd1-94ca-dff0f2f2ee22",
-          "TripStart": "2023-04-06T04:56:19.81+00:00",
-          "TripEnd": "2023-04-06T04:56:19.81+00:00",
-          "Description": "This is a test description.",
-          "ShortDescription": "Greece to Chattanooga",
-          "Total": 599.99
-        },
-        {
-          "TripDetailId": "e27fbaa6-8fa2-4f4d-9da7-307781bb7115",
-          "TripStart": "2023-04-06T04:56:19.81+00:00",
-          "TripEnd": "2023-04-06T04:56:19.81+00:00",
-          "Description": "This is a test description2.",
-          "ShortDescription": "Chickamauga to Rock Spring",
-          "Total": 0.01
-        }
-      ],
-      "Payment": {
-        "PaymentId": "b869d0f5-b78f-4ab4-ad08-63f26b18e349",
-        "AssignedToPerson": {
-          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        },
-        "Total": 600.00,
-        "IsPaidInFull": true,
-        "BillingDetails": null,
-        "Transactions": [
-          {
-            "TransactionId": "7ac195b4-debe-4c5c-a1bd-cad3f30e65ed",
-            "PersonId": "00000000-0000-0000-0000-000000000000",
-            "PaymentType": 3,
-            "Amount": 600,
-            "Card": null,
-            "Check": null,
-            "Cash": null
-          }
-        ]
-      },
-      "ThankYouNote": "mkmkkmkmkmkmk"
-    },
-    {
-      "AssignedByPersonId": "b859f1a1-ce9e-4032-b8f1-0c11c7f8d7be",
-      "TripId": "00424195-3e9c-4b43-8e32-651cf30d4708",
-      "Travellers": [
-        {
-          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        }
-      ],
-      "Packages": [
-        {
-          "TripDetailId": "d2b668df-6106-4cd1-94ca-dff0f2f2ee22",
-          "TripStart": "2023-04-06T04:56:19.81+00:00",
-          "TripEnd": "2023-04-06T04:56:19.81+00:00",
-          "Description": "This is a test description.",
-          "ShortDescription": "Greece to Chattanooga",
-          "Total": 599.99
-        },
-        {
-          "TripDetailId": "e27fbaa6-8fa2-4f4d-9da7-307781bb7115",
-          "TripStart": "2023-04-06T04:56:19.81+00:00",
-          "TripEnd": "2023-04-06T04:56:19.81+00:00",
-          "Description": "This is a test description2.",
-          "ShortDescription": "Chickamauga to Rock Spring",
-          "Total": 0.01
-        }
-      ],
-      "Payment": {
-        "PaymentId": "e89040b0-f910-40aa-88bb-86a08331f9a3",
-        "AssignedToPerson": {
-          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        },
-        "Total": 600.00,
-        "IsPaidInFull": true,
-        "BillingDetails": null,
-        "Transactions": [
-          {
-            "TransactionId": "78aa53ef-1e55-40c1-a9fa-376570f992bb",
-            "PersonId": "00000000-0000-0000-0000-000000000000",
-            "PaymentType": 3,
-            "Amount": 600,
-            "Card": null,
-            "Check": null,
-            "Cash": null
-          }
-        ]
-      },
-      "ThankYouNote": "opopopopoopopo"
-    },
-    {
-      "AssignedByPersonId": "b859f1a1-ce9e-4032-b8f1-0c11c7f8d7be",
-      "TripId": "e13757ad-5182-46b0-95f1-5278953f7fc0",
-      "Travellers": [
-        {
-          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        }
-      ],
-      "Packages": [
-        {
-          "TripDetailId": "d2b668df-6106-4cd1-94ca-dff0f2f2ee22",
-          "TripStart": "2023-04-06T04:56:19.81+00:00",
-          "TripEnd": "2023-04-06T04:56:19.81+00:00",
-          "Description": "This is a test description.",
-          "ShortDescription": "Greece to Chattanooga",
-          "Total": 599.99
-        },
-        {
-          "TripDetailId": "e27fbaa6-8fa2-4f4d-9da7-307781bb7115",
-          "TripStart": "2023-04-06T04:56:19.81+00:00",
-          "TripEnd": "2023-04-06T04:56:19.81+00:00",
-          "Description": "This is a test description2.",
-          "ShortDescription": "Chickamauga to Rock Spring",
-          "Total": 0.01
-        }
-      ],
-      "Payment": {
-        "PaymentId": "66165172-a666-4df3-a4f5-3c6c4dd3a246",
-        "AssignedToPerson": {
-          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        },
-        "Total": 600.00,
-        "IsPaidInFull": true,
-        "BillingDetails": null,
-        "Transactions": [
-          {
-            "TransactionId": "b21faad9-c087-416c-b41b-eb8c134c7783",
+            "TransactionId": "f2e9c7e1-1e1a-4446-9dc2-20830bc8dba7",
             "PersonId": "00000000-0000-0000-0000-000000000000",
             "PaymentType": 1,
-            "Amount": 500,
+            "Amount": 74000,
             "Card": {
-              "CardId": "b35e4157-f323-4620-98dd-625b05798490",
-              "CardNumber": "11111111111111",
-              "ExpirationDate": "2023-04-29T00:00:00-04:00",
+              "CardId": "4d8f09e5-afad-46e1-81db-158fc1589f26",
+              "CardNumber": "123-123-123",
+              "ExpirationDate": "2024-12-31T00:00:00-05:00",
               "SecurityCode": "123",
-              "NameOnCard": "kjjnkjnkjn",
+              "NameOnCard": "Mr. Poe Pickles",
               "Address": {
-                "AddressId": "825aa685-6aba-461e-9a3c-d7c5a8edef88",
-                "Street": "123 test street ",
-                "City": "rock spring",
-                "State": "ga",
+                "AddressId": "64b6bd43-6cf2-44eb-9e86-a0aa9668c875",
+                "Street": "123 Rich Street",
+                "City": "Rich Town",
+                "State": "Ga",
                 "ZipCode": null
               }
             },
             "Check": null,
             "Cash": null
-          },
-          {
-            "TransactionId": "99cb8240-9252-4f69-9ee8-f99208964056",
-            "PersonId": "00000000-0000-0000-0000-000000000000",
-            "PaymentType": 2,
-            "Amount": 50,
-            "Card": null,
-            "Check": {
-              "CheckId": "2e42bb45-96da-4e51-aa28-782c6f81865c",
-              "RoutingNumber": "1111111",
-              "AccountNumber": "88888",
-              "CheckNumber": "00098"
-            },
-            "Cash": null
-          },
-          {
-            "TransactionId": "2ed61d0b-1092-492e-9721-c63830db9e6b",
-            "PersonId": "00000000-0000-0000-0000-000000000000",
-            "PaymentType": 3,
-            "Amount": 50,
-            "Card": null,
-            "Check": null,
-            "Cash": null
           }
         ]
       },
-      "ThankYouNote": "jijijijijjiji"
-    },
-    {
-      "AssignedByPersonId": "fc92cfe4-d9cc-4ce7-94dd-194237a38a26",
-      "TripId": "f6a82992-4937-492a-9b11-ee43d83fa131",
-      "Travellers": [
-        {
-          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        }
-      ],
-      "Packages": [
-        {
-          "TripDetailId": "d2b668df-6106-4cd1-94ca-dff0f2f2ee22",
-          "TripStart": "2023-04-06T04:56:19.81+00:00",
-          "TripEnd": "2023-04-06T04:56:19.81+00:00",
-          "Description": "This is a test description.",
-          "ShortDescription": "Greece to Chattanooga",
-          "Total": 599.99
-        }
-      ],
-      "Payment": {
-        "PaymentId": "ca6918ca-239c-454a-8d42-b5545cf61b1f",
-        "AssignedToPerson": {
-          "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
-          "FirstName": "Wyatt",
-          "LastName": "Hardin",
-          "Email": "whardin1010@gmail.com",
-          "Phone": "4236642960",
-          "IsEmployee": false,
-          "CardDetails": null,
-          "NameFull": "Wyatt Hardin"
-        },
-        "Total": 599.99,
-        "IsPaidInFull": true,
-        "BillingDetails": null,
-        "Transactions": [
-          {
-            "TransactionId": "75f11536-4f9a-4dd1-bec8-1aa7a5c29c85",
-            "PersonId": "00000000-0000-0000-0000-000000000000",
-            "PaymentType": 3,
-            "Amount": 600,
-            "Card": null,
-            "Check": null,
-            "Cash": null
-          }
-        ]
-      },
-      "ThankYouNote": "mkmkmkmkmkmkm"
+      "ThankYouNote": "Mr. Pickles \u2013 Your trip to Fiji is all set. I have booked top-quality transport for every leg of your trip. I am including a fine bottle of your favorite drink, Boones Farm Sunshine Pink, to enjoy along the way. If you have any questions or problems, call me anytime. Safe travels! Bill Bryson, Certified Premium Travel Service Agent"
     }
   ],
   "StateMachines": [
     {
-      "TripId": "034cfce0-2c0f-4e3c-970f-40ebb3fd1e13",
-      "CurrentState": 6,
-      "IsComplete": true
-    },
-    {
-      "TripId": "f6068385-c33b-4c9e-a3b8-c7c7a510f3c4",
-      "CurrentState": 6,
-      "IsComplete": true
-    },
-    {
-      "TripId": "12dd841e-0082-4ab5-924f-b4944782410c",
-      "CurrentState": 6,
-      "IsComplete": true
-    },
-    {
-      "TripId": "1236810a-5913-427a-9e72-8f2f8ee24310",
-      "CurrentState": 6,
-      "IsComplete": true
-    },
-    {
-      "TripId": "a9d6ad5f-167d-4cd6-be79-edadf62dee06",
-      "CurrentState": 6,
-      "IsComplete": true
-    },
-    {
-      "TripId": "00424195-3e9c-4b43-8e32-651cf30d4708",
-      "CurrentState": 6,
-      "IsComplete": true
-    },
-    {
-      "TripId": "e13757ad-5182-46b0-95f1-5278953f7fc0",
-      "CurrentState": 6,
-      "IsComplete": true
-    },
-    {
-      "TripId": "f6a82992-4937-492a-9b11-ee43d83fa131",
+      "TripId": "b09d7154-a95f-4ae0-ad29-f4e8218f6f74",
       "CurrentState": 6,
       "IsComplete": true
     }
   ],
   "Travellers": [
     {
+      "PersonId": "e191a7a2-93d0-45cf-8bd4-053670bcd6e2",
+      "FirstName": "Mr. Poe",
+      "LastName": "Pickles",
+      "Email": "whardin1010@gmail.com",
+      "Phone": "4236642960",
+      "IsEmployee": false,
+      "CardDetails": null,
+      "NameFull": "Mr. Poe Pickles"
+    },
+    {
+      "PersonId": "c48d1387-14c6-490a-a723-29fb1ab69eaa",
+      "FirstName": "Mr. Pickles",
+      "LastName": "Friend #1",
+      "Email": "whardin1010@gmail.com",
+      "Phone": "4236642960",
+      "IsEmployee": false,
+      "CardDetails": null,
+      "NameFull": "Mr. Pickles Friend #1"
+    },
+    {
+      "PersonId": "12e0b216-1658-4cff-bb52-daf2f4d7381b",
+      "FirstName": "Mr. Pickles",
+      "LastName": "Friend #2",
+      "Email": "whardin1010@gmail.com",
+      "Phone": "4236642960",
+      "IsEmployee": false,
+      "CardDetails": null,
+      "NameFull": "Mr. Pickles Friend #2"
+    },
+    {
+      "PersonId": "c7149bea-b942-47b3-9b58-73575d7cab0f",
+      "FirstName": "Mr. Pickles",
+      "LastName": "Friend #3",
+      "Email": "whardin1010@gmail.com",
+      "Phone": "4236642960",
+      "IsEmployee": false,
+      "CardDetails": null,
+      "NameFull": "Mr. Pickles Friend #3"
+    },
+    {
+      "PersonId": "5aae38ba-0e5a-42e9-9527-ee8852ed561f",
+      "FirstName": "Mr. Pickles",
+      "LastName": "Friend #4",
+      "Email": "whardin1010@gmail.com",
+      "Phone": "4236642960",
+      "IsEmployee": false,
+      "CardDetails": null,
+      "NameFull": "Mr. Pickles Friend #4"
+    },
+    {
       "PersonId": "ae5f3fc2-2fca-4798-a9f4-7c557738b829",
+      "FirstName": "Mr. Pickles",
+      "LastName": "Friend #5",
+      "Email": "whardin1010@gmail.com",
+      "Phone": "4236642960",
+      "IsEmployee": false,
+      "CardDetails": null,
+      "NameFull": "Mr. Pickles Friend #5"
+    },
+    {
+      "PersonId": "642ae1a1-69f5-4cc1-ab82-04a37fd7c642",
       "FirstName": "Wyatt",
       "LastName": "Hardin",
       "Email": "whardin1010@gmail.com",
@@ -604,45 +254,109 @@
     },
     {
       "PersonId": "ef010aab-85ff-42bc-bae0-d3cd7651da0b",
-      "FirstName": "adam",
-      "LastName": "ismon",
-      "Email": "whardin1010@gmail.com",
-      "Phone": "4236642960",
+      "FirstName": "Eric",
+      "LastName": "Cartman",
+      "Email": "cartman@gmail.com",
+      "Phone": "4236649800",
       "IsEmployee": false,
       "CardDetails": null,
-      "NameFull": "adam ismon"
+      "NameFull": "Eric Cartman"
     }
   ],
   "Agents": [
     {
       "PersonId": "b859f1a1-ce9e-4032-b8f1-0c11c7f8d7be",
-      "FirstName": "Maddy",
-      "LastName": "Crowley",
-      "Email": "test@test.com",
+      "FirstName": "Bill",
+      "LastName": "Bryson",
+      "Email": "bill.bryson@premium.com",
       "Phone": "4235557894",
       "IsEmployee": true,
       "CardDetails": null,
-      "NameFull": "Maddy Crowley"
+      "NameFull": "Bill Bryson"
     },
     {
       "PersonId": "fc92cfe4-d9cc-4ce7-94dd-194237a38a26",
-      "FirstName": "Dylan",
-      "LastName": "Harnby",
-      "Email": "test@test.com",
+      "FirstName": "Butters",
+      "LastName": "Stotch",
+      "Email": "butters.stotch@premium.com",
       "Phone": "4235557894",
       "IsEmployee": true,
       "CardDetails": null,
-      "NameFull": "Dylan Harnby"
+      "NameFull": "Butters Stotch"
     }
   ],
   "Packages": [
     {
-      "TripDetailId": "d2b668df-6106-4cd1-94ca-dff0f2f2ee22",
-      "TripStart": "2023-04-06T04:56:19.81+00:00",
-      "TripEnd": "2023-04-06T04:56:19.81+00:00",
-      "Description": "This is a test description.",
-      "ShortDescription": "Greece to Chattanooga",
-      "Total": 599.99
+      "TripDetailId": "4d0b1eee-51b5-4f88-a145-01039da0d178",
+      "TripStart": "2023-10-05T10:00:19.81+00:00",
+      "TripEnd": "2023-10-01T11:00:19.81+00:00",
+      "Description": "Helicopter from Casa Pickles to Los Angeles Airport",
+      "ShortDescription": "Helicopter from Casa Pickles to Los Angeles Airport",
+      "Total": 4000.00
+    },
+    {
+      "TripDetailId": "9c9bba6c-f55c-4125-a3f9-b6451dc8f646",
+      "TripStart": "2023-10-05T12:00:19.81+00:00",
+      "TripEnd": "2023-10-01T22:00:19.81+00:00",
+      "Description": "Private Jet from Los Angeles Airport to Fiji Airport",
+      "ShortDescription": "Private Jet from Los Angeles Airport to Fiji Airport",
+      "Total": 17000.00
+    },
+    {
+      "TripDetailId": "9a788910-fb42-4dab-a763-36438ba2f5d3",
+      "TripStart": "2023-10-05T22:00:19.81+00:00",
+      "TripEnd": "2023-10-05T23:00:19.81+00:00",
+      "Description": "Limousine from Fiji Airport to Fiji Marina",
+      "ShortDescription": "Limousine from Fiji Airport to Fiji Marina",
+      "Total": 500.00
+    },
+    {
+      "TripDetailId": "9c4b8d8c-5140-4f12-917f-435029010800",
+      "TripStart": "2023-10-05T22:00:19.81+00:00",
+      "TripEnd": "2023-10-05T09:00:19.81+00:00",
+      "Description": "Yacht from Fiji Marina to Paradise Pickles Private Island",
+      "ShortDescription": "Yacht from Fiji Marina to Paradise Pickles Private Island",
+      "Total": 12000.00
+    },
+    {
+      "TripDetailId": "f06dab15-cdb8-45b5-9649-7eecf0507564",
+      "TripStart": "2023-10-19T09:00:19.81+00:00",
+      "TripEnd": "2023-10-19T17:00:19.81+00:00",
+      "Description": "Yacht from Paradise Pickles Private Island to Fiji Marina",
+      "ShortDescription": "Yacht from Paradise Pickles Private Island to Fiji Marina",
+      "Total": 12000.00
+    },
+    {
+      "TripDetailId": "9cab2778-6ce4-444e-8cd6-62c634172740",
+      "TripStart": "2023-10-19T17:00:19.81+00:00",
+      "TripEnd": "2023-10-19T18:00:19.81+00:00",
+      "Description": "Limousine from Fiji Marina to Fiji Airport",
+      "ShortDescription": "Limousine from Fiji Marina to Fiji Airport",
+      "Total": 500.00
+    },
+    {
+      "TripDetailId": "b12eec62-3d6d-4116-874c-6c9dcbd2d164",
+      "TripStart": "2023-10-19T18:00:19.81+00:00",
+      "TripEnd": "2023-10-20T02:00:19.81+00:00",
+      "Description": "Private Jet from Fiji Airport to San Diego Airport",
+      "ShortDescription": "Private Jet from Fiji Airport to San Diego Airport",
+      "Total": 23000.00
+    },
+    {
+      "TripDetailId": "5f728560-11b0-4f61-85e4-2040b31acb0d",
+      "TripStart": "2023-10-19T18:00:19.81+00:00",
+      "TripEnd": "2023-10-20T02:00:19.81+00:00",
+      "Description": "Helicopter from San Diego Airport to Palace Pickle",
+      "ShortDescription": "Helicopter from San Diego Airport to Palace Pickle",
+      "Total": 5000.00
+    },
+    {
+      "TripDetailId": "067e7750-effe-4f97-8f5a-25bf91aab27e",
+      "TripStart": "2023-10-20T02:00:19.81+00:00",
+      "TripEnd": "2023-10-20T03:00:19.81+00:00",
+      "Description": "Greece to Atlanta",
+      "ShortDescription": "Greece to Atlanta",
+      "Total": 4000.00
     },
     {
       "TripDetailId": "e27fbaa6-8fa2-4f4d-9da7-307781bb7115",
@@ -650,7 +364,7 @@
       "TripEnd": "2023-04-06T04:56:19.81+00:00",
       "Description": "This is a test description2.",
       "ShortDescription": "Chickamauga to Rock Spring",
-      "Total": 0.01
+      "Total": 30.00
     }
   ]
 }

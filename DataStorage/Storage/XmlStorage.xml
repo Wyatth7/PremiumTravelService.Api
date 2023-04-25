@@ -1,7 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StorageData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Trips/>
-  <StateMachines />
+  <Trips>
+    <AssignedByPersonId>00000000-0000-0000-0000-000000000000</AssignedByPersonId>
+    <TripId>00000000-0000-0000-0000-000000000000</TripId>
+  </Trips>
+  <Trips>
+    <AssignedByPersonId>b859f1a1-ce9e-4032-b8f1-0c11c7f8d7be</AssignedByPersonId>
+    <TripId>fa1f187e-16aa-4050-9f9c-6552e11a16b6</TripId>
+    <Travellers>
+      <Person>
+        <PersonId>e191a7a2-93d0-45cf-8bd4-053670bcd6e2</PersonId>
+        <FirstName>Mr. Poe</FirstName>
+        <LastName>Pickles</LastName>
+        <Email>whardin1010@gmail.com</Email>
+        <Phone>4236642960</Phone>
+        <IsEmployee>false</IsEmployee>
+      </Person>
+      <Person>
+        <PersonId>c48d1387-14c6-490a-a723-29fb1ab69eaa</PersonId>
+        <FirstName>Mr. Pickles</FirstName>
+        <LastName>Friend #1</LastName>
+        <Email>whardin1010@gmail.com</Email>
+        <Phone>4236642960</Phone>
+        <IsEmployee>false</IsEmployee>
+      </Person>
+      <Person>
+        <PersonId>12e0b216-1658-4cff-bb52-daf2f4d7381b</PersonId>
+        <FirstName>Mr. Pickles</FirstName>
+        <LastName>Friend #2</LastName>
+        <Email>whardin1010@gmail.com</Email>
+        <Phone>4236642960</Phone>
+        <IsEmployee>false</IsEmployee>
+      </Person>
+      <Person>
+        <PersonId>c7149bea-b942-47b3-9b58-73575d7cab0f</PersonId>
+        <FirstName>Mr. Pickles</FirstName>
+        <LastName>Friend #3</LastName>
+        <Email>whardin1010@gmail.com</Email>
+        <Phone>4236642960</Phone>
+        <IsEmployee>false</IsEmployee>
+      </Person>
+      <Person>
+        <PersonId>5aae38ba-0e5a-42e9-9527-ee8852ed561f</PersonId>
+        <FirstName>Mr. Pickles</FirstName>
+        <LastName>Friend #4</LastName>
+        <Email>whardin1010@gmail.com</Email>
+        <Phone>4236642960</Phone>
+        <IsEmployee>false</IsEmployee>
+      </Person>
+      <Person>
+        <PersonId>ae5f3fc2-2fca-4798-a9f4-7c557738b829</PersonId>
+        <FirstName>Mr. Pickles</FirstName>
+        <LastName>Friend #5</LastName>
+        <Email>whardin1010@gmail.com</Email>
+        <Phone>4236642960</Phone>
+        <IsEmployee>false</IsEmployee>
+      </Person>
+    </Travellers>
+    <Packages>
+      <Package>
+        <TripDetailId>4d0b1eee-51b5-4f88-a145-01039da0d178</TripDetailId>
+        <TripStart>2023-10-05T10:00:19.81Z</TripStart>
+        <TripEnd>2023-10-01T11:00:19.81Z</TripEnd>
+        <Description>Helicopter from Casa Pickles to Los Angeles Airport</Description>
+        <ShortDescription>Helicopter from Casa Pickles to Los Angeles Airport</ShortDescription>
+        <Total>4000.00</Total>
+      </Package>
+      <Package>
+        <TripDetailId>9c9bba6c-f55c-4125-a3f9-b6451dc8f646</TripDetailId>
+        <TripStart>2023-10-05T12:00:19.81Z</TripStart>
+        <TripEnd>2023-10-01T22:00:19.81Z</TripEnd>
+        <Description>Private Jet from Los Angeles Airport to Fiji Airport</Description>
+        <ShortDescription>Private Jet from Los Angeles Airport to Fiji Airport</ShortDescription>
+        <Total>17000.00</Total>
+      </Package>
+      <Package>
+        <TripDetailId>9a788910-fb42-4dab-a763-36438ba2f5d3</TripDetailId>
+        <TripStart>2023-10-05T22:00:19.81Z</TripStart>
+        <TripEnd>2023-10-05T23:00:19.81Z</TripEnd>
+        <Description>Limousine from Fiji Airport to Fiji Marina</Description>
+        <ShortDescription>Limousine from Fiji Airport to Fiji Marina</ShortDescription>
+        <Total>500.00</Total>
+      </Package>
+      <Package>
+        <TripDetailId>9c4b8d8c-5140-4f12-917f-435029010800</TripDetailId>
+        <TripStart>2023-10-05T22:00:19.81Z</TripStart>
+        <TripEnd>2023-10-05T09:00:19.81Z</TripEnd>
+        <Description>Yacht from Fiji Marina to Paradise Pickles Private Island</Description>
+        <ShortDescription>Yacht from Fiji Marina to Paradise Pickles Private Island</ShortDescription>
+        <Total>12000.00</Total>
+      </Package>
+      <Package>
+        <TripDetailId>f06dab15-cdb8-45b5-9649-7eecf0507564</TripDetailId>
+        <TripStart>2023-10-19T09:00:19.81Z</TripStart>
+        <TripEnd>2023-10-19T17:00:19.81Z</TripEnd>
+        <Description>Yacht from Paradise Pickles Private Island to Fiji Marina</Description>
+        <ShortDescription>Yacht from Paradise Pickles Private Island to Fiji Marina</ShortDescription>
+        <Total>12000.00</Total>
+      </Package>
+      <Package>
+        <TripDetailId>9cab2778-6ce4-444e-8cd6-62c634172740</TripDetailId>
+        <TripStart>2023-10-19T17:00:19.81Z</TripStart>
+        <TripEnd>2023-10-19T18:00:19.81Z</TripEnd>
+        <Description>Limousine from Fiji Marina to Fiji Airport</Description>
+        <ShortDescription>Limousine from Fiji Marina to Fiji Airport</ShortDescription>
+        <Total>500.00</Total>
+      </Package>
+      <Package>
+        <TripDetailId>b12eec62-3d6d-4116-874c-6c9dcbd2d164</TripDetailId>
+        <TripStart>2023-10-19T18:00:19.81Z</TripStart>
+        <TripEnd>2023-10-20T02:00:19.81Z</TripEnd>
+        <Description>Private Jet from Fiji Airport to San Diego Airport</Description>
+        <ShortDescription>Private Jet from Fiji Airport to San Diego Airport</ShortDescription>
+        <Total>23000.00</Total>
+      </Package>
+      <Package>
+        <TripDetailId>5f728560-11b0-4f61-85e4-2040b31acb0d</TripDetailId>
+        <TripStart>2023-10-19T18:00:19.81Z</TripStart>
+        <TripEnd>2023-10-20T02:00:19.81Z</TripEnd>
+        <Description>Helicopter from San Diego Airport to Palace Pickle</Description>
+        <ShortDescription>Helicopter from San Diego Airport to Palace Pickle</ShortDescription>
+        <Total>5000.00</Total>
+      </Package>
+    </Packages>
+    <Payment>
+      <PaymentId>365f450c-9d79-4c3c-a6a6-31aed4dba6fd</PaymentId>
+      <AssignedToPerson>
+        <PersonId>e191a7a2-93d0-45cf-8bd4-053670bcd6e2</PersonId>
+        <FirstName>Mr. Poe</FirstName>
+        <LastName>Pickles</LastName>
+        <Email>whardin1010@gmail.com</Email>
+        <Phone>4236642960</Phone>
+        <IsEmployee>false</IsEmployee>
+      </AssignedToPerson>
+      <Total>74000.00</Total>
+      <IsPaidInFull>true</IsPaidInFull>
+      <Transactions>
+        <Transaction>
+          <TransactionId>aeaf88fc-dffc-47c5-b9c0-3739a872d9be</TransactionId>
+          <PersonId>00000000-0000-0000-0000-000000000000</PersonId>
+          <PaymentType>Card</PaymentType>
+          <Amount>74000</Amount>
+          <Card>
+            <CardId>c192b483-a7c0-4c12-a28d-86b5fa531e18</CardId>
+            <CardNumber>123-123-123</CardNumber>
+            <ExpirationDate>2024-12-31T00:00:00-05:00</ExpirationDate>
+            <SecurityCode>123</SecurityCode>
+            <NameOnCard>Mr. Poe Pickles</NameOnCard>
+            <Address>
+              <AddressId>78f77e60-f837-4647-bdc4-0dd12781dc0c</AddressId>
+              <Street>123 Address Street</Street>
+              <City>City Street</City>
+              <State>Ga</State>
+            </Address>
+          </Card>
+        </Transaction>
+      </Transactions>
+    </Payment>
+    <ThankYouNote>Mr. Pickles – Your trip to Fiji is all set. I have booked top-quality transport for every leg of your trip. I am including a fine bottle of your favorite drink, Boones Farm Sunshine Pink, to enjoy along the way. If you have any questions or problems, call me anytime. Safe travels! Bill Bryson, Certified Premium Travel Service Agent</ThankYouNote>
+  </Trips>
+  <StateMachines>
+    <TripState>
+      <TripId>fa1f187e-16aa-4050-9f9c-6552e11a16b6</TripId>
+      <CurrentState>Itinerary</CurrentState>
+      <IsComplete>true</IsComplete>
+    </TripState>
+    <TripState>
+      <TripId>e65525ed-28d4-4caf-bdb0-f4ed11220294</TripId>
+      <CurrentState>Itinerary</CurrentState>
+      <IsComplete>true</IsComplete>
+    </TripState>
+  </StateMachines>
   <Travellers />
   <Agents />
   <Packages />
